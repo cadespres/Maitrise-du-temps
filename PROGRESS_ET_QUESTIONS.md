@@ -32,14 +32,13 @@
 - **SYNTHESE_REPONSES.md** - Synthèse détaillée de vos réponses
   - Clarifications sur la nature de l'expansion
   - Exemples concrets à toutes les échelles
-  - Formule critique (Δτ) × d³
+  - Formule simplifiée (Effet ∝ Δτ)
   - Applications aux courbes de rotation
 
 - **RESULTATS_TEST.md** - Tests numériques et validation
   - Calculs avec constantes cosmologiques
-  - Comparaison Hypothèse A vs B
-  - Validation de l'Hypothèse B
-  - Interprétation physique du d³
+  - Formulation de l'effet Asselin
+  - Interprétation physique de l'effet cumulatif
 
 #### ✅ Scripts de Test
 - **test_formule.py** - Version complète avec graphiques (nécessite numpy/matplotlib)
@@ -82,16 +81,17 @@ d_limite = c / H₀ ≈ 4,283 Mpc ≈ 14 milliards d'années-lumière
 ```
 Limite absolue où expansion = vitesse lumière
 
-✅ **Effet Asselin (Hypothèse validée: B)**
+✅ **Effet Asselin**
 ```
-Effet ∝ (τ₂ - τ₁) × d³
+Effet ∝ (τ₂ - τ₁)
 ```
-Croît avec la distance jusqu'à l'horizon c/H₀
+Basé sur la différence de distorsion temporelle
 
-**Interprétation:** Effet volumique cumulatif
-- Pas une force entre deux objets
-- Intégration sur le volume de matière
-- Plus de distance → plus de matière contributrice → plus de liaisons
+**Interprétation:** Effet cumulatif des liaisons
+- Liaison temporelle commune entre objets
+- Accumulation de multiples liaisons
+- Plus de matière → plus de liaisons → effet plus fort
+- Décroît avec la distance mais effet cumulatif peut être significatif
 
 ### 3. Échelles d'Observation Confirmées
 
@@ -130,15 +130,12 @@ Croît avec la distance jusqu'à l'horizon c/H₀
 
 ### 🔴 CRITIQUES (Urgentes - Bloquent la formalisation)
 
-#### Q1: Interprétation exacte du d³
-**Question:** Le terme d³ dans la formule Effet ∝ (Δτ) × d³ représente-t-il:
-- **A)** Un effet volumique cumulatif (intégration sur la matière dans volume ∝ d³)?
-- **B)** Une loi de force inhabituelle qui croît avec la distance?
-- **C)** Autre chose?
+#### Q1: Mécanisme physique des liaisons temporelles
+**Question:** Quel est le mécanisme physique exact par lequel une différence de distorsion temporelle crée une liaison gravitationnelle?
 
-**Importance:** CRITIQUE - définit toute la structure mathématique de la théorie
+**Importance:** CRITIQUE - définit le fondement physique de la théorie
 
-**Statut:** En attente de votre confirmation
+**Statut:** À clarifier
 
 ---
 
@@ -167,9 +164,9 @@ Effet_total = ∫∫∫ ρ(r) × (Δτ(r)) × r³ dV  ?
 ```
 
 **Besoin:**
-- Formule d'intégration exacte
-- Profil de densité ρ(r) à utiliser
-- Limites d'intégration
+- Formule de sommation ou d'intégration exacte
+- Comment calculer la contribution de chaque liaison
+- Constante de proportionnalité
 
 **Importance:** CRITIQUE - permet de calculer les courbes de rotation
 
@@ -449,7 +446,7 @@ Effet_total = ∫∫∫ ρ(r) × (Δτ(r)) × r³ dV  ?
 9 fichiers markdown + 2 scripts Python = **fondation solide**
 
 ### Prochaine Session
-**Priorité absolue:** Répondre à Q1 (interprétation du d³)
+**Priorité absolue:** Clarifier le mécanisme physique des liaisons temporelles
 
 ---
 

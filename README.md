@@ -75,11 +75,11 @@ La distorsion temporelle décroît avec le carré de la distance.
 
 ### Effet Asselin
 ```
-Effet ∝ (τ₂ - τ₁) × d³
+Effet ∝ (τ₂ - τ₁)
 ```
-L'effet cumulatif des liaisons temporelles croît avec le volume considéré.
+L'effet est basé sur la différence de distorsion temporelle entre deux zones spatiales.
 
-**Interprétation :** Effet volumique cumulatif - l'intégration sur un volume plus grand inclut plus de matière contributrice, donc plus de liaisons.
+**Interprétation :** Liaison temporelle commune - plus la différence de distorsion est grande, plus la liaison est forte. L'effet cumulatif de multiples liaisons peut produire des effets significatifs aux échelles cosmologiques.
 
 ---
 
@@ -141,9 +141,9 @@ L'effet cumulatif des liaisons temporelles croît avec le volume considéré.
 ## ❓ Questions en Suspens
 
 ### Questions Critiques (bloquantes)
-1. **Interprétation exacte du d³** - Effet volumique ou loi de force ?
-2. **Forme exacte de τ(M, r)** - Formule complète avec constantes
-3. **Calcul de l'effet cumulatif** - Intégrale exacte pour applications
+1. **Forme exacte de τ(M, r)** - Formule complète avec constantes
+2. **Calcul de l'effet cumulatif** - Intégrale exacte pour applications
+3. **Mécanisme physique** - Comment les liaisons temporelles produisent-elles un effet gravitationnel?
 
 ### Questions Importantes (validation)
 4. Prédiction testable pour Saturne
@@ -157,7 +157,7 @@ Voir [PROGRESS_ET_QUESTIONS.md](PROGRESS_ET_QUESTIONS.md) pour la liste complèt
 
 ## 🎯 Prochaines Étapes
 
-1. **Clarifier les questions critiques** (interprétation du d³)
+1. **Clarifier le mécanisme physique** des liaisons temporelles
 2. **Formaliser mathématiquement** les équations complètes
 3. **Calculer** une courbe de rotation galactique
 4. **Identifier** une prédiction testable unique
