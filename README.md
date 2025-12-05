@@ -182,42 +182,105 @@ dτ/dt = 1.53 × 10⁻¹⁸ s⁻¹
 
 ## 📁 Structure du Projet
 
-### Documents Fondamentaux (Phase 1 ✅ Complétée)
+Le projet est organisé de manière claire et structurée :
 
 ```
-📋 Statut et Clarifications
-├── PHASE_1_COMPLETE.md              ⭐ Phase 1 à 100%
-├── CADRE_RELATIVITE_GENERALE.md     ⭐ Confirmation : nous faisons de la RG
-└── CONSTANTES_MANQUANTES.md         ⭐ Analyse : aucune nouvelle constante nécessaire
-
-🔬 Formulation Principale
-├── FORMULATION_REDSHIFT_TEMPOREL.md ⭐ Redshift = distorsion temporelle
-├── LIAISON_ASSELIN.md               ⭐ Gravitation par liaison temporelle
-├── correspondance_tau_redshift.py   ⭐ Calculs τ ↔ z
-
-📊 Énergie Noire (3 langues)
-├── DEFINITION_ENERGIE_NOIRE.md      🇫🇷 Définition complète
-├── DARK_ENERGY_DEFINITION.md        🇬🇧 English version
-└── DEFINICION_ENERGIA_OSCURA.md     🇪🇸 Versión española
-
-📊 Matière Noire (3 langues)
-├── DEFINITION_MATIERE_NOIRE.md      🇫🇷 Définition complète
-├── DARK_MATTER_DEFINITION.md        🇬🇧 English version
-└── DEFINICION_MATERIA_OSCURA.md     🇪🇸 Versión española
-
-🧮 Scripts de Calcul
-├── calcul_temps_local_terre.py      ⭐ Temps local exact (RG + Lorentz)
-├── calcul_liaisons_asselin.py       ⭐ Liaisons aux 5 échelles
-├── calcul_distorsion_cosmologique.py   Distorsion vs redshift
-└── calcul_lorentz_systeme_solaire.py  Cartographie Després
-
-📚 Documents de Référence
-├── CONCEPTS_FONDAMENTAUX.md            Principes de base
-├── FORMULATION_MATHEMATIQUE.md         Équations
-└── CALCULS_LORENTZ.md                  Facteurs de Lorentz
+Maitrise-du-temps/
+├── README.md                         📖 Documentation principale
+├── CLAUDE.md                         🤖 Instructions pour Claude
+├── docs/                            📚 Documentation scientifique
+│   ├── fr/                          🇫🇷 Documents en français
+│   │   ├── theories/                🔬 Documents théoriques fondamentaux
+│   │   ├── analyses/                📊 Analyses et synthèses
+│   │   ├── definitions/             📖 Définitions matière/énergie noire
+│   │   └── communications/          📧 Plans, emails, prédictions
+│   ├── en/                          🇬🇧 English documents
+│   │   └── definitions/             📖 Dark matter/energy definitions
+│   └── es/                          🇪🇸 Documentos en español
+│       └── definitions/             📖 Definiciones materia/energía oscura
+├── scripts/                         💻 Scripts Python
+│   ├── calculs/                     🧮 Scripts de calcul
+│   └── tests/                       🧪 Scripts de test
+└── archive/                         📦 Archives
+    └── obsolete/                    ⚠️  Documents obsolètes (formule d³)
 ```
 
-### Documents Obsolètes (⚠️ Ne pas utiliser)
+### Documents Théoriques Fondamentaux
+**`docs/fr/theories/`**
+
+- `CADRE_RELATIVITE_GENERALE.md` - ⭐ Confirmation : nous faisons de la RG
+- `FORMULATION_REDSHIFT_TEMPOREL.md` - ⭐ Redshift = distorsion temporelle
+- `LIAISON_ASSELIN.md` - ⭐ Gravitation par liaison temporelle
+- `CONCEPTS_FONDAMENTAUX.md` - Principes de base
+- `FORMULATION_MATHEMATIQUE.md` - Équations principales
+- `DERIVATION_RIGOUREUSE_RG.md` - Dérivation depuis la RG
+- `RESULTATS_DERIVATION_RG.md` - Résultats de la dérivation
+- `LIENS_RG_ET_ELECTROMAGNETISME.md` - Liens avec l'électromagnétisme
+- `CORRECTIONS_TAU_1_SUR_R.md` - Corrections τ(r) = 1/r
+- `CALCULS_LORENTZ.md` - Facteurs de Lorentz
+- `RESEAU_LIGNES_ASSELIN.md` - Réseau géométrique des liaisons
+
+### Analyses et Synthèses
+**`docs/fr/analyses/`**
+
+- `PHASE_1_COMPLETE.md` - ⭐ Phase 1 à 100%
+- `CONSTANTES_MANQUANTES.md` - ⭐ Aucune nouvelle constante nécessaire
+- `SYNTHESE_COMPLETE_TESTS_QUANTITATIFS.md` - Synthèse complète (1000+ lignes)
+- `ANALYSE_COURBES_ROTATION.md` - Analyse test #1
+- `ANALYSE_OPTIMISATION_D_EFF.md` - Analyse test #2
+- `ANALYSE_ECHELLES_GALACTIQUES.md` - Comparaison 5 échelles
+- `SYNTHESE_ECHELLE_GALACTIQUE.md` - Recommandations structurées
+- `APPROCHE_HYBRIDE_IDT.md` - Analyse conceptuelle hybride
+- `REPONSE_APPROCHE_HYBRIDE.md` - Résultats hybride
+- `SYNTHESE_FINALE_2025-12-05.md` - Synthèse finale
+- `PROGRESS_ET_QUESTIONS.md` - Progrès et questions ouvertes
+
+### Définitions Multilingues
+**`docs/fr/definitions/`** 🇫🇷
+- `DEFINITION_ENERGIE_NOIRE.md` - Définition complète énergie noire
+- `DEFINITION_MATIERE_NOIRE.md` - Définition complète matière noire
+
+**`docs/en/definitions/`** 🇬🇧
+- `DARK_ENERGY_DEFINITION.md` - Complete dark energy definition
+- `DARK_MATTER_DEFINITION.md` - Complete dark matter definition
+
+**`docs/es/definitions/`** 🇪🇸
+- `DEFINICION_ENERGIA_OSCURA.md` - Definición completa energía oscura
+- `DEFINICION_MATERIA_OSCURA.md` - Definición completa materia oscura
+
+### Communications et Plans
+**`docs/fr/communications/`**
+
+- `EMAIL_CONTACT_UNIONS.md` - Email de contact UNIONS
+- `PLAN_ACTION.md` - Plan d'action général
+- `PLAN_ANALYSE_CORRELATION_HALOS.md` - Plan analyse corrélation halos
+- `OBSERVATIONS_ALIGNEMENT_HALOS.md` - Observations alignement halos
+- `PREDICTION_TESTABLE_UNIQUE.md` - Prédictions testables uniques
+
+### Scripts de Calcul
+**`scripts/calculs/`**
+
+- `calcul_temps_local_terre.py` - ⭐ Temps local exact (RG + Lorentz)
+- `calcul_liaisons_asselin.py` - ⭐ Liaisons aux 5 échelles
+- `correspondance_tau_redshift.py` - ⭐ Calculs τ ↔ z
+- `calcul_distorsion_cosmologique.py` - Distorsion vs redshift
+- `calcul_lorentz_systeme_solaire.py` - Cartographie Després
+- `calcul_lorentz.py` - Calculs de Lorentz
+- `calcul_courbe_rotation_galaxie.py` - Courbes de rotation
+- `courbe_rotation_galactique.py` - Rotation galactique
+- `courbe_rotation_maitrise_temps.py` - Rotation selon MT
+- `modele_double_expansion.py` - Modèle double expansion
+- `optimisation_distance_effective.py` - Optimisation d_eff
+
+### Scripts de Test
+**`scripts/tests/`**
+
+- `test_approche_hybride_IDT.py` - Test approche hybride
+- `test_echelles_recommandees.py` - Test échelles recommandées
+- `test_formulations_rigoureuses_RG.py` - Test formulations RG
+
+### Documents Obsolètes
+**`archive/obsolete/`** ⚠️
 
 Ces documents contiennent l'ancienne formule erronée avec `d³` :
 - `reponses.md`
@@ -520,20 +583,20 @@ d_eff(ρ) = fonction de la densité locale
 
 ### Pour Comprendre la Théorie
 
-1. **[FORMULATION_REDSHIFT_TEMPOREL.md](FORMULATION_REDSHIFT_TEMPOREL.md)** - Vision d'ensemble complète
-2. **[LIAISON_ASSELIN.md](LIAISON_ASSELIN.md)** - Mécanisme gravitationnel
-3. **[CADRE_RELATIVITE_GENERALE.md](CADRE_RELATIVITE_GENERALE.md)** - Cohérence avec RG
+1. **[FORMULATION_REDSHIFT_TEMPOREL.md](docs/fr/theories/FORMULATION_REDSHIFT_TEMPOREL.md)** - Vision d'ensemble complète
+2. **[LIAISON_ASSELIN.md](docs/fr/theories/LIAISON_ASSELIN.md)** - Mécanisme gravitationnel
+3. **[CADRE_RELATIVITE_GENERALE.md](docs/fr/theories/CADRE_RELATIVITE_GENERALE.md)** - Cohérence avec RG
 
 ### Pour les Calculs
 
-4. **[calcul_temps_local_terre.py](calcul_temps_local_terre.py)** - Valeurs exactes τ_Terre
-5. **[calcul_liaisons_asselin.py](calcul_liaisons_asselin.py)** - Liaisons aux 5 échelles
-6. **[correspondance_tau_redshift.py](correspondance_tau_redshift.py)** - Correspondance τ ↔ z
+4. **[calcul_temps_local_terre.py](scripts/calculs/calcul_temps_local_terre.py)** - Valeurs exactes τ_Terre
+5. **[calcul_liaisons_asselin.py](scripts/calculs/calcul_liaisons_asselin.py)** - Liaisons aux 5 échelles
+6. **[correspondance_tau_redshift.py](scripts/calculs/correspondance_tau_redshift.py)** - Correspondance τ ↔ z
 
 ### Pour l'Énergie et la Matière Noires
 
-7. **[DEFINITION_ENERGIE_NOIRE.md](DEFINITION_ENERGIE_NOIRE.md)** - Énergie noire (FR)
-8. **[DEFINITION_MATIERE_NOIRE.md](DEFINITION_MATIERE_NOIRE.md)** - Matière noire (FR)
+7. **[DEFINITION_ENERGIE_NOIRE.md](docs/fr/definitions/DEFINITION_ENERGIE_NOIRE.md)** - Énergie noire (FR)
+8. **[DEFINITION_MATIERE_NOIRE.md](docs/fr/definitions/DEFINITION_MATIERE_NOIRE.md)** - Matière noire (FR)
 
 ---
 
@@ -577,8 +640,8 @@ Projet de recherche théorique
 
 ---
 
-**Dernière mise à jour** : 2025-11-30
-**Version** : 2.0 (Formulation complète, Phase 1 achevée)
+**Dernière mise à jour** : 2025-12-05
+**Version** : 2.1 (Réorganisation complète du codebase)
 
 **Citation suggérée** :
 > *"L'expansion de l'univers est une illusion. Le temps accélère."*
