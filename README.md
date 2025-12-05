@@ -69,9 +69,9 @@ Pour le Système Solaire :
 
 ### Distorsion Temporelle
 ```
-τ(r) ∝ 1/r²
+τ(r) = GM/(rc²) ∝ 1/r
 ```
-La distorsion temporelle décroît avec le carré de la distance.
+La distorsion temporelle décroît inversement avec la distance (cohérent avec la Relativité Générale - métrique de Schwarzschild).
 
 ### Effet Asselin
 ```

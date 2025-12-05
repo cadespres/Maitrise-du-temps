@@ -156,7 +156,7 @@ Tout comme un champ électrique induit une polarisation dans un diélectrique, l
 
 ### Court Terme (0-6 mois)
 
-1. **Recalculer** tous les documents avec τ(r) ∝ 1/r (correction RG)
+1. ✅ **Recalculé** tous les documents avec τ(r) = GM/(rc²) ∝ 1/r (correction RG - FAIT le 2025-12-05)
 2. **Optimiser** k_asselin pour fit exact des courbes de rotation observées
 3. **Rédiger grant** ERC/ANR pour test de la Prédiction #1
 4. **Contacter** experts weak lensing (collaboration)
