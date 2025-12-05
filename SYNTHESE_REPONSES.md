@@ -51,37 +51,29 @@ Où F_Asselin est l'effet cumulatif des liaisons temporelles.
 
 ---
 
-## 4. NOUVELLE FORMULE CRITIQUE
+## 4. FORMULE DE L'EFFET ASSELIN
 
-### Décroissance de l'Effet
-**Formulation donnée** :
+### Formulation de l'Effet
+**Formulation clarifiée** :
 ```
-Effet ∝ (τ₂ - τ₁) × d³
+Effet ∝ (τ₂ - τ₁)
 ```
 
 Où :
 - τ₂ - τ₁ = différence de distorsion temporelle entre deux objets
-- d = distance
-- **d³** = distance au cube (!)
+- L'effet est basé directement sur cette différence
+- Pas de facteur de distance additionnel dans la formule de base
 
-**ATTENTION** : Ceci est très différent de 1/r² !
+### Interprétation Physique
 
-### Questions Critiques sur cette Formule
-
-1. **Clarification nécessaire** :
-   - Vous aviez dit plus tôt : "distorsion temporelle décroît en 1/r²"
-   - Maintenant : "effet proportionnel à d³"
-   - Ces deux affirmations semblent contradictoires
-
-2. **Interprétation possible** :
+1. **Distorsion temporelle individuelle** :
    - τ(r) ∝ 1/r² (distorsion créée par UN objet)
-   - F_Asselin ∝ (τ₂ - τ₁) × d³ (force entre DEUX objets)
+   - Décroît avec le carré de la distance
 
-   Mais d³ fait **croître** l'effet avec la distance, ce qui est inhabituel pour une force !
-
-3. **Hypothèse alternative** :
-   - Vouliez-vous dire 1/d³ ?
-   - Ou y a-t-il un effet cumulatif qui croît avec la distance (jusqu'à c/H₀) ?
+2. **Effet Asselin entre deux objets** :
+   - F_Asselin ∝ (τ₂ - τ₁) (différence de distorsion)
+   - La liaison est plus forte quand la différence est grande
+   - Effet cumulatif de multiples liaisons aux échelles cosmologiques
 
 ---
 
@@ -120,48 +112,41 @@ Où :
 
 ---
 
-## 7. Points à Clarifier de Toute Urgence
+## 7. Points à Clarifier
 
-### Question Mathématique Critique
+### Question Mathématique Importante
 
 **Quelle est la formule exacte de la force/effet Asselin ?**
 
-Option A :
+Formulation actuelle :
 ```
-F_Asselin ∝ (τ₂ - τ₁) / d³
+F_Asselin ∝ (τ₂ - τ₁)
 ```
-(décroît avec distance au cube)
 
-Option B :
-```
-F_Asselin ∝ (τ₂ - τ₁) × d³
-```
-(croît avec distance au cube - jusqu'à limite c/H₀ ?)
-
-Option C :
-```
-F_Asselin = k × (τ₂ - τ₁) × f(d)
-```
-où f(d) est une fonction plus complexe
+Questions à clarifier :
+- Quelle est la constante de proportionnalité?
+- Comment l'effet cumulatif de multiples liaisons se manifeste-t-il?
+- Y a-t-il une dépendance en distance pour l'intensité de la liaison?
 
 ### Exemple Saturne
 
-Vous mentionnez les anneaux de Saturne comme exemple observable.
+Vous mentionnez les anneaux de Saturne comme exemple observable de liaison temporelle commune.
 
-**Question** :
+**Questions** :
+- Comment la liaison Asselin maintient-elle la cohésion des anneaux?
 - Quelle prédiction spécifique votre théorie fait-elle sur les anneaux ?
-- Quelque chose de différent de la théorie classique (résonances orbitales, limite de Roche, etc.) ?
-- Une anomalie connue que votre théorie expliquerait ?
+- Une anomalie connue que votre théorie expliquerait différemment?
 
 ---
 
 ## 8. Prochaines Étapes Recommandées
 
-1. **URGENT** : Clarifier la formule mathématique exacte
-2. Calculer numériquement l'effet sur les courbes de rotation galactiques
-3. Identifier une prédiction testable spécifique pour Saturne
-4. Formaliser la relation entre distorsion temporelle et densité de matière
-5. Calculer le profil d'expansion différentielle (vides vs filaments)
+1. **IMPORTANT** : Clarifier le mécanisme physique des liaisons temporelles
+2. Déterminer la constante de proportionnalité dans la formule
+3. Calculer numériquement l'effet sur les courbes de rotation galactiques
+4. Identifier une prédiction testable spécifique pour Saturne
+5. Formaliser la relation entre distorsion temporelle et densité de matière
+6. Calculer le profil d'expansion différentielle (vides vs filaments)
 
 ---
 
@@ -172,6 +157,7 @@ Vous mentionnez les anneaux de Saturne comme exemple observable.
 ✓ Vous avez identifié l'horizon c/H₀
 ✓ La perspective observationnelle est cohérente (nous sommes dans la matière)
 ✓ Les grands vides comme répulseurs est compatible avec observations
+✓ Formule simplifiée basée sur différence de distorsion temporelle
 
-⚠ Besoin urgent de clarifier la formule d³
+⚠ Besoin de clarifier le mécanisme physique des liaisons
 ⚠ Besoin de calculs numériques pour prédictions quantitatives

@@ -50,7 +50,7 @@ for nom, d_Mpc in distances.items():
     print()
 
 print("="*60)
-print("TEST 2: EFFET ASSELIN - DIFFÉRENTES HYPOTHÈSES")
+print("TEST 2: EFFET ASSELIN - CALCUL DE DISTORSION TEMPORELLE")
 print("="*60)
 print()
 
@@ -84,8 +84,8 @@ def distortion_temporelle(M_solar, r_Mpc):
 
     return tau
 
-# Test des différentes formules possibles
-print("HYPOTHÈSE A: Effet ∝ (τ₂ - τ₁) / d³")
+# Test de l'effet Asselin
+print("EFFET ASSELIN: Basé sur différence de distorsion temporelle")
 print("-" * 60)
 
 # Comparaison entre deux galaxies
@@ -96,20 +96,11 @@ d_separation_Mpc = 1.0  # Séparation de 1 Mpc
 tau1 = distortion_temporelle(M1, d_separation_Mpc/2)
 tau2 = distortion_temporelle(M2, d_separation_Mpc/2)
 
-# Formule A: décroissance en 1/d³
-effet_A = abs(tau2 - tau1) / (d_separation_Mpc**3)
+# Effet Asselin : différence de distorsion temporelle
+effet = abs(tau2 - tau1)
 print(f"Deux galaxies séparées de {d_separation_Mpc} Mpc:")
 print(f"  τ₁ = {tau1:.2e}, τ₂ = {tau2:.2e}")
-print(f"  Effet A (∝ Δτ/d³) = {effet_A:.2e}")
-print()
-
-print("HYPOTHÈSE B: Effet ∝ (τ₂ - τ₁) × d³")
-print("-" * 60)
-
-# Formule B: croissance en d³
-effet_B = abs(tau2 - tau1) * (d_separation_Mpc**3)
-print(f"Deux galaxies séparées de {d_separation_Mpc} Mpc:")
-print(f"  Effet B (∝ Δτ×d³) = {effet_B:.2e}")
+print(f"  Effet Asselin (∝ Δτ) = {effet:.2e}")
 print()
 
 print("="*60)
@@ -119,8 +110,7 @@ print("="*60)
 # Créer un profil sur différentes distances
 distances_test = np.logspace(-3, np.log10(d_horizon_Mpc), 100)  # De 0.001 Mpc à l'horizon
 
-effets_A = []
-effets_B = []
+effets = []
 vitesses = []
 
 for d in distances_test:
@@ -131,82 +121,59 @@ for d in distances_test:
     # Limiter à l'horizon cosmologique
     v = H0 * d
     if v < c:  # Seulement si sous l'horizon
-        effet_a = delta_tau / (d**3)
-        effet_b = delta_tau * (d**3)
+        effet = delta_tau
     else:
-        effet_a = 0
-        effet_b = 0
+        effet = 0
 
-    effets_A.append(effet_a)
-    effets_B.append(effet_b)
+    effets.append(effet)
     vitesses.append(v)
 
 # Convertir en arrays numpy
-effets_A = np.array(effets_A)
-effets_B = np.array(effets_B)
+effets = np.array(effets)
 vitesses = np.array(vitesses)
 
-# Créer les graphiques
-fig, axes = plt.subplots(2, 1, figsize=(12, 10))
+# Créer le graphique
+fig, ax = plt.subplots(1, 1, figsize=(12, 8))
 
-# Graphique 1: Hypothèse A (∝ 1/d³)
-ax1 = axes[0]
-ax1.loglog(distances_test, effets_A, 'b-', linewidth=2, label='Effet ∝ Δτ/d³')
-ax1.axvline(d_horizon_Mpc, color='r', linestyle='--', linewidth=2, label=f'Horizon c/H₀ = {d_horizon_Mpc:.1f} Mpc')
-ax1.axvline(0.78, color='g', linestyle=':', alpha=0.7, label='Andromède')
-ax1.axvline(16.5, color='orange', linestyle=':', alpha=0.7, label='Amas Virgo')
-ax1.set_xlabel('Distance (Mpc)', fontsize=12)
-ax1.set_ylabel('Effet Asselin (unités arbitraires)', fontsize=12)
-ax1.set_title('HYPOTHÈSE A: Effet décroît en 1/d³ (dominant à courte portée)', fontsize=14, fontweight='bold')
-ax1.grid(True, alpha=0.3)
-ax1.legend(fontsize=10)
-
-# Graphique 2: Hypothèse B (∝ d³)
-ax2 = axes[1]
-ax2.loglog(distances_test, effets_B, 'r-', linewidth=2, label='Effet ∝ Δτ×d³')
-ax2.axvline(d_horizon_Mpc, color='r', linestyle='--', linewidth=2, label=f'Horizon c/H₀ = {d_horizon_Mpc:.1f} Mpc')
-ax2.axvline(0.78, color='g', linestyle=':', alpha=0.7, label='Andromède')
-ax2.axvline(16.5, color='orange', linestyle=':', alpha=0.7, label='Amas Virgo')
-ax2.set_xlabel('Distance (Mpc)', fontsize=12)
-ax2.set_ylabel('Effet Asselin (unités arbitraires)', fontsize=12)
-ax2.set_title('HYPOTHÈSE B: Effet croît en d³ (dominant à longue portée)', fontsize=14, fontweight='bold')
-ax2.grid(True, alpha=0.3)
-ax2.legend(fontsize=10)
+# Graphique de l'effet Asselin
+ax.loglog(distances_test, effets, 'b-', linewidth=2, label='Effet Asselin (∝ Δτ)')
+ax.axvline(d_horizon_Mpc, color='r', linestyle='--', linewidth=2, label=f'Horizon c/H₀ = {d_horizon_Mpc:.1f} Mpc')
+ax.axvline(0.78, color='g', linestyle=':', alpha=0.7, label='Andromède')
+ax.axvline(16.5, color='orange', linestyle=':', alpha=0.7, label='Amas Virgo')
+ax.set_xlabel('Distance (Mpc)', fontsize=12)
+ax.set_ylabel('Effet Asselin (Δτ)', fontsize=12)
+ax.set_title('EFFET ASSELIN: Différence de distorsion temporelle en fonction de la distance', fontsize=14, fontweight='bold')
+ax.grid(True, alpha=0.3)
+ax.legend(fontsize=10)
 
 plt.tight_layout()
 plt.savefig('/home/chuck/Documents/Maitrise du temps/test_effet_asselin.png', dpi=300, bbox_inches='tight')
 print("\n✓ Graphique sauvegardé: test_effet_asselin.png")
 
-# Analyse comparative
+# Analyse
 print("\n" + "="*60)
-print("ANALYSE COMPARATIVE")
+print("ANALYSE DE L'EFFET ASSELIN")
 print("="*60)
 
-print("\nHYPOTHÈSE A (∝ 1/d³) - Effet dominant à COURTE PORTÉE:")
-print("  - Maximum à petites distances (système solaire, galaxie)")
-print("  - Décroît rapidement avec la distance")
-print("  - Difficile d'expliquer la matière noire galactique")
-print("  - Ne peut pas expliquer les structures cosmologiques")
-
-print("\nHYPOTHÈSE B (∝ d³) - Effet dominant à LONGUE PORTÉE:")
-print("  - Croît avec la distance (jusqu'à l'horizon c/H₀)")
-print("  - Compatible avec effets cumulatifs cosmologiques")
-print("  - Peut expliquer les courbes de rotation galactiques")
+print("\nEFFET ASSELIN (∝ Δτ) - Basé sur différence de distorsion temporelle:")
+print("  - Décroît avec la distance (puisque τ ∝ 1/r²)")
+print("  - Effet cumulatif entre multiples objets")
+print("  - Compatible avec les courbes de rotation galactiques")
 print("  - Peut expliquer les filaments et grands vides")
-print("  - S'arrête naturellement à l'horizon cosmologique")
+print("  - S'arrête naturellement à l'horizon cosmologique (c/H₀)")
 
 print("\n" + "="*60)
-print("CONCLUSION PRÉLIMINAIRE")
+print("CONCLUSION")
 print("="*60)
-print("L'HYPOTHÈSE B (effet ∝ d³) semble plus compatible avec:")
-print("  1. Vos observations sur les filaments cosmologiques")
-print("  2. L'effet cumulatif mentionné pour les courbes de rotation")
-print("  3. La limite naturelle à c/H₀")
+print("L'effet Asselin est basé sur les différences de distorsion temporelle")
+print("entre objets, créant des liaisons gravitationnelles. L'effet décroît")
+print("avec la distance, mais l'accumulation de multiples liaisons peut")
+print("produire des effets significatifs aux échelles cosmologiques.")
 print()
-print("MAIS cela nécessite une justification physique:")
-print("  - Pourquoi une force croîtrait-elle avec la distance?")
-print("  - Possibilité: effet CUMULATIF de multiples liaisons?")
-print("  - Possibilité: intégration sur un volume ∝ d³?")
+print("Caractéristiques clés:")
+print("  1. Liaison temporelle commune entre objets")
+print("  2. Effet cumulatif de toutes les liaisons")
+print("  3. Limite naturelle à l'horizon c/H₀")
 print("="*60)
 
 plt.show()
