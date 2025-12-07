@@ -1,0 +1,48 @@
+============================================================
+CALIBRATION k_Asselin - RÉSULTATS
+============================================================
+
+Échantillon: 6 galaxies SPARC
+k_Asselin optimal = 0.047964
+alpha_distance = 3.000
+χ² total = 6800.0
+χ²_red = 147.83
+
+Résultats par galaxie:
+------------------------------------------------------------
+
+NGC2403:
+  M_visible = 5.30e+09 M☉
+  χ²_red = 150.12
+  ⟨v_obs⟩ = 114.4 km/s
+  ⟨v_pred⟩ = 73.8 km/s
+
+NGC3198:
+  M_visible = 8.30e+09 M☉
+  χ²_red = 184.69
+  ⟨v_obs⟩ = 141.6 km/s
+  ⟨v_pred⟩ = 69.2 km/s
+
+NGC6503:
+  M_visible = 2.60e+09 M☉
+  χ²_red = 160.25
+  ⟨v_obs⟩ = 102.1 km/s
+  ⟨v_pred⟩ = 65.9 km/s
+
+DDO154:
+  M_visible = 6.50e+08 M☉
+  χ²_red = 73.54
+  ⟨v_obs⟩ = 47.0 km/s
+  ⟨v_pred⟩ = 38.2 km/s
+
+UGC2885:
+  M_visible = 5.80e+10 M☉
+  χ²_red = 172.74
+  ⟨v_obs⟩ = 285.6 km/s
+  ⟨v_pred⟩ = 107.3 km/s
+
+NGC2841:
+  M_visible = 4.12e+10 M☉
+  χ²_red = 240.59
+  ⟨v_obs⟩ = 280.6 km/s
+  ⟨v_pred⟩ = 116.5 km/s
