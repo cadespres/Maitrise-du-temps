@@ -1,0 +1,16 @@
+======================================================================
+CALIBRATION k_Asselin - NGC 3198
+Résolution numérique M_Després = k ∫|∇γ_Després|² dV
+======================================================================
+
+Galaxie: NGC 3198
+M_disk = 8.30e+09 M☉
+R_disk = 5.0 kpc
+
+Point calibration:
+  r = 15.0 kpc
+  v_obs = 150.0 km/s
+
+k_Asselin = 9.999990e-03
+
+Rapport M_Després/M_baryonique à 30.0 kpc: 0.00

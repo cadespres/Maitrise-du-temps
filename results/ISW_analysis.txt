@@ -1,0 +1,15 @@
+ANALYSE EFFET ISW - PLANCK CMB
+============================================================
+
+ISW ΛCDM:         8.408648e-04
+ISW MT (vide):    8.904572e-04
+ISW MT (moyen):   8.408648e-04
+ISW MT (amas):    6.713853e-04
+
+Ratio vide/ΛCDM:  1.059
+Ratio amas/ΛCDM:  0.798
+
+PRÉDICTION MT:
+  - Corrélation ISW-vides amplifiée (expansion rapide)
+  - Corrélation ISW-amas réduite (expansion lente)
+  - Test décisif: analyser séparément ISW-vides et ISW-amas

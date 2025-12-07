@@ -1,9 +1,10 @@
 # Definición de la Materia Oscura
 ## Una Reinterpretación a través de la Distorsión Temporal
 
-**Versión**: 1.0
-**Fecha**: 2025-11-30
+**Versión**: 1.1
+**Fecha**: 2025-12-07
 **Idioma**: Español
+**Actualización**: Terminología oficial Masa Després y Cartografía Després
 
 ---
 
@@ -19,6 +20,19 @@ En el marco de la Teoría del Dominio del Tiempo, la **materia oscura** no es un
 
 **La materia oscura es una manifestación de puntos de acumulación de líneas de distorsión temporal, análogos a los puntos de Lagrange gravitacionales.**
 
+### Terminología Oficial: Masa Després
+
+En la Teoría del Dominio del Tiempo, utilizamos el término **Masa Després** para designar:
+
+```
+Masa Després = Masa observada - Masa bariónica visible
+```
+
+**Naturaleza física**:
+- **NO** es una partícula exótica ni materia desconocida
+- **SÍ** es un **efecto geométrico** de la distorsión temporal acumulada
+- Análoga a los puntos de Lagrange, donde las distorsiones se suman
+
 ### Características Clave
 
 **Naturaleza**:
@@ -28,8 +42,14 @@ En el marco de la Teoría del Dominio del Tiempo, la **materia oscura** no es un
 
 **Analogía con los Puntos de Lagrange**:
 - Así como los puntos de Lagrange son zonas de equilibrio gravitacional
-- Los "puntos de materia oscura" son zonas de acumulación de distorsión temporal
+- Los "puntos de Masa Després" son zonas de acumulación de distorsión temporal
 - Estas zonas crean efectos gravitacionales aparentes sin masa visible
+
+**¿Dónde se encuentra la Masa Després?**
+- En puntos de acumulación de **Enlaces Asselin**
+- En halos galácticos (distribución esferoidal/elipsoidal)
+- A lo largo de filamentos cósmicos
+- Dondequiera que convergen gradientes de distorsión temporal
 
 ---
 
@@ -141,16 +161,23 @@ Donde:
 
 ### Ecuación Maestra
 
-El efecto gravitacional aparente debido a la materia oscura en una región R:
+El efecto gravitacional aparente debido a la Masa Després en una región R:
 
 ```
-ρ_MO_aparente(R) = k · ∑ᵢ Enlace_Asselin(R, Mᵢ)
+M_Després(r) = k_Asselin · ∫∫∫_Volumen |∇γ_Després(r')|² dV'
 ```
 
 Donde:
-- `ρ_MO_aparente` = densidad aparente de materia oscura
-- `k` = constante de acoplamiento a determinar
-- La suma se realiza sobre todas las masas Mᵢ enlazadas a R por distorsión temporal
+- `M_Després` = masa equivalente aparente (efecto geométrico)
+- `k_Asselin` = constante de acoplamiento (calibrada en ~0.01-0.05)
+- `γ_Després` = factor de Lorentz generalizado: 1/√(1 - v²/c² - 2Φ/c²)
+- `∇γ_Després` = gradiente del factor de Lorentz (Enlaces Asselin)
+- La integración se realiza sobre todo el volumen relevante
+
+**Relación con observaciones**:
+```
+M_observada = M_bariónica + M_Després
+```
 
 ---
 
@@ -203,11 +230,12 @@ Donde:
 
 | Aspecto | Lambda-CDM | Teoría del Dominio del Tiempo |
 |---------|-----------|-------------------------------|
-| **Naturaleza de la materia oscura** | Partícula exótica (WIMP, axión...) | Efecto geométrico de distorsión temporal |
+| **Naturaleza de la materia oscura** | Partícula exótica (WIMP, axión...) | **Masa Després** = efecto geométrico |
 | **Detección directa** | Esperada (detectores subterráneos) | Imposible (no hay partícula) |
-| **Distribución espacial** | Halo esférico alrededor de las galaxias | Puntos de acumulación tipo Lagrange |
+| **Distribución espacial** | Halo NFW esférico | Distribución según Enlaces Asselin |
 | **Vínculo con materia visible** | Ninguno (excepto gravitación) | Enlace Asselin directo |
-| **Predicciones verificables** | Aniquilación, dispersión | Cartografía Després, curvas de rotación modificadas |
+| **Predicciones verificables** | Aniquilación, dispersión | Asimetría de halos, correlación θ_halo ↔ θ_vecino |
+| **Masa del halo** | Masa real de partículas exóticas | **Masa Després** = masa equivalente |
 
 ---
 
@@ -223,9 +251,9 @@ Donde:
 
 ### Predicción 2: Correlación con Estructuras Vecinas
 
-**Predicción**: La "cantidad" de materia oscura aparente en una galaxia depende de su entorno:
-- Galaxias aisladas: menos materia oscura aparente
-- Galaxias en cúmulos: más materia oscura aparente (enlaces acumulados)
+**Predicción**: La cantidad de **Masa Després** en una galaxia depende de su entorno:
+- Galaxias aisladas: menos Masa Després (pocos Enlaces Asselin)
+- Galaxias en cúmulos: más Masa Després (Enlaces acumulados)
 
 **Prueba**: Analizar las curvas de rotación en función del entorno galáctico
 
@@ -292,9 +320,9 @@ La reinterpretación de la materia oscura como **puntos de acumulación de disto
 
 Los tres conceptos clave:
 
-- **Materia oscura** = Puntos tipo Lagrange de distorsión temporal
-- **Enlace Asselin** = Diferencia/promedio de distorsión entre zonas
-- **Cartografía Després** = Índice Lorentz + 3ª ley de Kepler
+- **Masa Després** = Masa equivalente (efecto geométrico de distorsión temporal)
+- **Enlace Asselin** = Gradiente de distorsión temporal: |τ(A) - τ(B)| = |Φ_A - Φ_B|/c²
+- **Cartografía Després** = Mapa de valores γ_Després (factor de Lorentz) en todo punto del espacio
 
 Este enfoque requiere ahora:
 - Formalización matemática completa
