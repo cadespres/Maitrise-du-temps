@@ -212,8 +212,8 @@ v_newt = np.array([v_newton(r) / 1000 for r in rayons_m])  # en km/s
 print("  - Vitesses newtoniennes: OK")
 
 # Avec effet Asselin (ajuster k_interne et k_externe pour fit)
-k_interne = 5e-4  # À ajuster
-k_externe = 1e-6  # À ajuster
+k_interne = 0.0343  # Constante de couplage interne
+k_externe = 1e-6  # Constante de couplage externe (ajustable)
 
 v_avec_asselin = []
 for i, r in enumerate(rayons_m):
