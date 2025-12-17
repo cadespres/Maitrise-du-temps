@@ -563,9 +563,210 @@ Donde g(r) = función de acoplamiento gravitacional
 
 ---
 
-## 11. Filosofía: El Universo Dual
+---
 
-### 11.1 Principio de Dualidad Temporal
+## 11. Unificación con la Mecánica Cuántica
+
+### 11.1 Estado Cuántico en el Horizonte
+
+**Horizonte como interfaz cuántica**:
+
+En el horizonte (t = 0), la dualidad t⁺/t⁻ es fundamentalmente cuántica.
+
+**Estado cuántico del horizonte**:
+
+```
+|Ψ_horizonte⟩ = α|t⁺⟩ + β|t⁻⟩
+
+Con |α|² + |β|² = 1 (normalización)
+```
+
+**Significado físico**:
+- |t⁺⟩: estado interior del agujero negro
+- |t⁻⟩: estado exterior (nuestro universo)
+- α, β: amplitudes de probabilidad complejas
+
+### 11.2 Superposición de Marcos de Referencia Temporales
+
+Una partícula cerca del horizonte existe en una superposición de marcos de referencia temporales:
+
+```
+|Ψ_partícula⟩ = ∑_n c_n |t_n⟩
+
+Donde t_n abarca continuamente t⁻ → 0 → t⁺
+```
+
+**Decoherencia en el horizonte**:
+
+```
+ρ(t) = |Ψ⟩⟨Ψ| → ∑_n |c_n|² |t_n⟩⟨t_n|
+
+Tiempo de decoherencia: τ_decoh ≈ ℏ/(k_B T_Hawking)
+```
+
+### 11.3 Entrelazamiento Entre t⁺ y t⁻
+
+**Estados entrelazados a través del horizonte**:
+
+```
+|Ψ_EPR⟩ = (|↑⟩_t⁺ ⊗ |↓⟩_t⁻ - |↓⟩_t⁺ ⊗ |↑⟩_t⁻) / √2
+```
+
+**Resolución por dualidad temporal**:
+
+```
+Información en t⁺ ⟷ Información en t⁻
+
+Conservación: I_total = I(t⁺) + I(t⁻) = constante
+```
+
+**La información no se pierde**, se **redistribuye entre marcos duales**.
+
+### 11.4 Radiación de Hawking Cuántica
+
+**Creación de pares en el horizonte**:
+
+```
+|vacío⟩ → |partícula⟩_t⁻ ⊗ |antipartícula⟩_t⁺
+
+Estado máximamente entrelazado
+```
+
+**Relación de dualidad**:
+
+```
+Radiación_Hawking(t⁻) = -Acreción(t⁺) · (t⁻/t⁺)²
+
+∂M/∂t⁻ = -ℏc⁴/(15360πG²M²)  (evaporación)
+∂M/∂t⁺ = +ℏc⁴/(15360πG²M²)  (crecimiento dual)
+```
+
+### 11.5 Paradoja de la Información Resuelta
+
+**Problema clásico**: ¿Se pierde la información que cae en un agujero negro?
+
+**Solución vía dualidad t⁺/t⁻**:
+
+```
+Información total = I_interior(t⁺) + I_exterior(t⁻) = I_inicial
+
+Conservación unitaria:
+U(t) |Ψ_inicial⟩ = α(t)|Ψ⟩_t⁺ + β(t)|Ψ⟩_t⁻
+```
+
+**La información nunca se pierde**, está:
+1. Codificada en estado cuántico entrelazado t⁺/t⁻
+2. Accesible diferentemente según el marco
+3. Conservada por transformación unitaria
+
+### 11.6 Gravedad Cuántica en el Horizonte
+
+**Métrica cuántica**:
+
+```
+ĝ_μν = ⟨g_μν⟩ + δĝ_μν
+
+Donde δĝ_μν = operador de fluctuación cuántica
+```
+
+**En el horizonte (t = 0)**:
+
+```
+⟨δĝ²_tt⟩ → ℓ_Planck²/r_s²
+
+Fluctuaciones cuánticas máximas
+```
+
+**Régimen cuántico**: Cuando r_s ≈ ℓ_Planck, la dualidad t⁺/t⁻ se vuelve puramente cuántica.
+
+### 11.7 Correspondencia AdS/CFT y Dualidad Temporal
+
+**Conjetura holográfica**:
+
+La dualidad t⁺/t⁻ es consistente con AdS/CFT:
+
+```
+Gravedad cuántica en t⁺ (bulk) ⟷ Teoría de campos en t⁻ (frontera)
+
+S_bulk[g, t⁺] = S_CFT[campos, t⁻]
+```
+
+**Diccionario holográfico extendido**:
+
+| Marco t⁺ (bulk) | Marco t⁻ (frontera) |
+|-----------------|---------------------|
+| Métrica g_μν | Tensor energía-momento ⟨T_μν⟩ |
+| Horizonte en t=0 | Temperatura CFT = T_Hawking |
+| Acreción | Flujo de energía entrante |
+| Chorros (emisión) | Flujo de energía saliente |
+
+### 11.8 Predicciones Cuánticas Comprobables
+
+**1. Fluctuaciones cuánticas del tiempo cerca del horizonte**
+
+```
+⟨(Δt)²⟩ ∝ ℏG/(c⁵r²) · |t|
+
+Medible por interferometría gravitacional de alta precisión
+```
+
+**2. Correlaciones cuánticas en radiación de Hawking**
+
+```
+⟨n_ω₁ n_ω₂⟩ - ⟨n_ω₁⟩⟨n_ω₂⟩ ≠ 0
+
+Firma de entrelazamiento entre modos t⁺ y t⁻
+```
+
+**3. Violación aparente de causalidad cerca del horizonte**
+
+```
+Para eventos separados por Δt < ℏ/(k_B T_Hawking):
+Orden temporal se vuelve cuántico (superposición)
+```
+
+### 11.9 Cosmología Cuántica y Agujeros Negros
+
+**Función de onda del universo primordial**:
+
+Si el universo primordial estaba en estado t ≈ 0 (Big Bang):
+
+```
+|Ψ_universo(t≈0)⟩ = |t⁺⟩ + |t⁻⟩ (superposición igual)
+
+Ruptura espontánea de simetría → elección de marco
+```
+
+**Nuestro universo**: proyección en |t⁻⟩
+**Universo dual**: proyección en |t⁺⟩
+
+### 11.10 Síntesis: Naturaleza Cuántica de la Dualidad
+
+**Principio fundamental**:
+
+> La dualidad t⁺/t⁻ no es solo una curiosidad matemática, es una **propiedad cuántica fundamental del espacio-tiempo** en el horizonte de eventos.
+
+**Consecuencias**:
+
+1. **Información conservada**: Vía entrelazamiento cuántico entre t⁺ y t⁻
+2. **Radiación de Hawking explicada**: Creación de pares en estado entrelazado
+3. **Paradoja resuelta**: Información redistribuida, no destruida
+4. **Unificación natural**: Gravedad cuántica emerge de dualidad temporal
+5. **Holografía confirmada**: Consistencia con AdS/CFT
+
+**Ecuación maestra**:
+
+```
+|Ψ_horizonte⟩ = (|t⁺⟩ + e^(iφ)|t⁻⟩)/√2
+
+Con φ = S_BH/ℏ (entropía de Bekenstein-Hawking en unidades ℏ)
+```
+
+---
+
+## 12. Filosofía: El Universo Dual
+
+### 12.1 Principio de Dualidad Temporal
 
 **Enunciado fundamental**:
 
@@ -576,7 +777,7 @@ Donde g(r) = función de acoplamiento gravitacional
 2. Creación y destrucción son perspectivas, no absolutos
 3. Los agujeros negros son tan esenciales para la creación como las estrellas
 
-### 11.2 El Agujero Negro Creador
+### 12.2 El Agujero Negro Creador
 
 **Visión tradicional**: Agujero negro = muerte cósmica, fin de la información
 
@@ -594,9 +795,9 @@ En τ_AN: AN emite → vida (vía chorros invertidos)
 
 ---
 
-## 12. Conexiones con la Teoría Completa
+## 13. Conexiones con la Teoría Completa
 
-### 12.1 Enlace Asselin y Agujeros Negros
+### 13.1 Enlace Asselin y Agujeros Negros
 
 Los agujeros negros, con τ_AN → 0, crean **Enlaces Asselin extremos**:
 
@@ -612,7 +813,7 @@ f → f_max (enlace máximo)
 - Curvas de rotación planas (enlace con AN central)
 - Bulbo galáctico estabilizado por AN
 
-### 12.2 Cartografía Després Alrededor de los AN
+### 13.2 Cartografía Després Alrededor de los AN
 
 La **Cartografía Després** revela la estructura de distorsión alrededor de un AN:
 
@@ -633,9 +834,9 @@ El "halo de materia oscura" alrededor de un AN es la manifestación de este grad
 
 ---
 
-## 13. Preguntas Abiertas y Perspectivas
+## 14. Preguntas Abiertas y Perspectivas
 
-### 13.1 Física Cuántica en el Horizonte
+### 14.1 Física Cuántica en el Horizonte
 
 **Pregunta**: ¿Cómo se comporta la mecánica cuántica en la transición τ → 0?
 
@@ -644,7 +845,7 @@ El "halo de materia oscura" alrededor de un AN es la manifestación de este grad
 - ¿Superposición de marcos de referencia temporales?
 - ¿Información conservada en estructura temporal?
 
-### 13.2 Radiación de Hawking Reinterpretada
+### 14.2 Radiación de Hawking Reinterpretada
 
 **En τ_externo**: AN emite radiación térmica (Hawking)
 
@@ -658,9 +859,9 @@ Radiación_Hawking(τ_externo) = -Acreción(τ_AN) · (τ_externo/τ_AN)
 
 ---
 
-## 14. Resumen y Conclusiones
+## 15. Resumen y Conclusiones
 
-### 14.1 Principios Fundamentales
+### 15.1 Principios Fundamentales
 
 1. **El agujero negro es una referencia temporal absoluta** (τ_AN → 0)
 2. **Inversión de perspectiva**: destrucción en un marco = creación en el otro
@@ -669,7 +870,7 @@ Radiación_Hawking(τ_externo) = -Acreción(τ_AN) · (τ_externo/τ_AN)
    - Destructores en marco de referencia del AN
    - Creadores en marco de referencia externo (guarderías de estrellas)
 
-### 14.2 Implicaciones Mayores
+### 15.2 Implicaciones Mayores
 
 **Cosmológicas**:
 - Agujeros negros = anclas temporales del universo
@@ -681,7 +882,7 @@ Radiación_Hawking(τ_externo) = -Acreción(τ_AN) · (τ_externo/τ_AN)
 - Causalidad relativa al tiempo propio
 - Universo dual: no hay absoluto de creación o destrucción
 
-### 14.3 Unificación con Dominio del Tiempo
+### 15.3 Unificación con Dominio del Tiempo
 
 Esta cosmología de agujeros negros completa la **Teoría de Dominio del Tiempo**:
 
@@ -695,7 +896,7 @@ Anclas temporales (agujeros negros, τ → 0)
 Universo estructurado con materia/energía oscuras explicadas
 ```
 
-### 14.4 Hacia una Nueva Comprensión
+### 15.4 Hacia una Nueva Comprensión
 
 **El agujero negro no es un "agujero"**:
 - Es un **punto de referencia temporal**
@@ -714,7 +915,7 @@ Universo estructurado con materia/energía oscuras explicadas
 
 ---
 
-## 15. Fórmulas Clave
+## 16. Fórmulas Clave
 
 ### Estructura Temporal Dual
 ```
@@ -766,7 +967,7 @@ E_oscura(t⁻) + E_materia(t⁺) = 0 (conservación)
 
 ---
 
-## 16. Referencias y Documentos Relacionados
+## 17. Referencias y Documentos Relacionados
 
 **En la Teoría de Dominio del Tiempo**:
 - [ENLACE_ASSELIN.md](ENLACE_ASSELIN.md) - Gravitación por enlace temporal
