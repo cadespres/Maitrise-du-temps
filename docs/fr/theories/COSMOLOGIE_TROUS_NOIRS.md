@@ -1385,9 +1385,757 @@ Car tous partagent t = 0 comme référence commune
 
 ---
 
-## 13. Philosophie : L'Univers Dual
+## 13. Formalisations Mathématiques Avancées et Extensions
 
-### 13.1 Principe de Dualité Temporelle
+### 13.1 Topologie en Double Boucle : Formalisation Complète
+
+#### 13.1.1 Structure Différentielle de la Variété
+
+**Variété de base** :
+
+La structure spatio-temporelle du trou noir avec émission duale est une variété différentielle 𝓜 de dimension 4 :
+
+```
+𝓜 = ℝ × S² × 𝕊¹_t
+
+Où :
+- ℝ : dimension radiale (r ∈ [0, ∞))
+- S² : sphère angulaire (θ, φ)
+- 𝕊¹_t : cercle temporel compactifié
+```
+
+**Coordonnées locales** :
+
+```
+(r, θ, φ, t_c) avec t_c ∈ 𝕊¹ = ℝ/2πℤ
+
+Compactification temporelle :
+t_c = arctan(t/t_Planck) ∈ (-π, π]
+```
+
+**Carte de transition à l'horizon** :
+
+```
+r = r_s : Point critique avec changement de signature
+
+Carte intérieure (r < r_s) :
+  (r, θ, φ, t⁺) avec t⁺ ∈ (0, π]
+
+Carte extérieure (r > r_s) :
+  (r, θ, φ, t⁻) avec t⁻ ∈ [-π, 0)
+
+Fonction de transition :
+  t⁺ = π - |t⁻|  pour θ ≈ 90° (équateur)
+  t⁺ = -t⁻       pour θ ≈ 0°, 180° (pôles)
+```
+
+#### 13.1.2 Topologie en Fibré
+
+**Fibré principal** :
+
+```
+π : 𝓔 → 𝓑
+
+Base 𝓑 = S² (sphère angulaire)
+Fibre 𝓕 = ℝ × 𝕊¹_t (espace radial-temporel)
+
+Structure de groupe : U(1) × ℝ₊
+```
+
+**Connexion duale** :
+
+```
+Connexion Ω sur 𝓔 :
+
+Ω = Ω_équatorial + Ω_polaire
+
+Ω_équatorial(θ=90°) = dr ⊗ ∂_t + sin²(θ) dφ ⊗ (∂_masse)
+Ω_polaire(θ=0°,180°) = dr ⊗ ∂_t + c·dφ ⊗ (∂_lumière)
+
+Courbure :
+  F = dΩ + Ω ∧ Ω
+  F_équatorial ~ δ(θ - π/2) (concentration équatoriale)
+  F_polaire ~ δ(θ) + δ(θ - π) (concentration polaire)
+```
+
+#### 13.1.3 Topologie de la Figure-8
+
+**Espace topologique** :
+
+```
+𝓣 = (𝕊¹_équateur ∨ 𝕊¹_pôles) × S¹_φ
+
+Où ∨ désigne le wedge sum (somme amalgamée)
+
+Point de jonction : t = 0 (horizon)
+
+Invariant topologique :
+  χ(𝓣) = 0 (caractéristique d'Euler)
+  π₁(𝓣) = ℤ ⊕ ℤ (groupe fondamental)
+```
+
+**Décomposition en homologie** :
+
+```
+H₀(𝓣) = ℤ       (une composante connexe)
+H₁(𝓣) = ℤ ⊕ ℤ   (deux cycles indépendants)
+H₂(𝓣) = ℤ       (surface totale)
+
+Cycles générateurs :
+  γ₁ : boucle équatoriale (masse)
+  γ₂ : boucle polaire (lumière)
+
+Relation d'intersection :
+  γ₁ · γ₂ = 1 (intersection à t = 0)
+```
+
+#### 13.1.4 Métrique Complète
+
+**Métrique sur 𝓜** :
+
+```
+ds² = -f(r,θ)²c²dt_c² + g(r)²dr² + r²(dθ² + sin²θ dφ²)
+
+Avec fonctions métriques :
+
+f(r,θ) = |cos(t_c)| · [1 - 2GM/(rc²)]^(1/2) · h(θ)
+
+h(θ) = {
+  sin²θ           pour émission de masse (équateur)
+  cos²θ + ε       pour jets (pôles), ε → 0
+}
+
+g(r) = [1 - 2GM/(rc²)]^(-1/2)
+```
+
+**Signature** :
+
+```
+À l'horizon (r = r_s, t_c = 0) :
+  Signature change : (-,+,+,+) → (0,+,+,+)
+
+Métrique dégénérée permettant les deux émissions
+```
+
+#### 13.1.5 Diagramme de Penrose Étendu
+
+**Coordonnées de Penrose** :
+
+```
+u = t - r* (coordonnée lumière entrante)
+v = t + r* (coordonnée lumière sortante)
+
+r* = r + 2GM ln|r/(2GM) - 1| (coordonnée tortue)
+
+Compactification :
+  U = arctan(u)
+  V = arctan(v)
+```
+
+**Structure du diagramme** :
+
+```
+        I⁺ (futur null)
+         /\
+        /  \
+    Jets    Jets
+     |   \/   |
+     | Horizon|  ← Émission équatoriale
+     |   /\   |
+    t⁺   ||  t⁻
+     |   ||   |
+     | Sing.  |
+      \  ||  /
+       \ || /
+        \||/
+         \/
+        I⁻ (passé null)
+
+Nouveaux éléments :
+- Bifurcation horizontale : émission de masse
+- Bifurcation verticale : jets relativistes
+- Jonction centrale : t = 0 (double point)
+```
+
+### 13.2 Calculs Quantitatifs des Prédictions Observables
+
+#### 13.2.1 Anisotropie du CMB
+
+**Signature du jet primordial** :
+
+Assumant que le Big Bang est notre sortie d'un jet relativiste avec γ₀ ≫ 1 :
+
+```
+Température du CMB selon l'angle θ_jet :
+
+T(θ_jet) = T₀ · [1 + δT(θ_jet)]
+
+δT(θ_jet)/T₀ = (γ₀ - 1)/γ₀ · cos²(θ_jet)
+
+Pour γ₀ ~ 10³ (facteur de Lorentz initial) :
+
+δT/T ~ 10⁻³ · cos²(θ_jet)
+
+Amplitude maximale : ΔT/T ~ 10⁻³ ≈ 1 mK
+
+Compatible avec observations Planck : ΔT/T ~ 10⁻⁵ (dipôle)
+                                          ~ 10⁻⁵ (quadrupôle)
+```
+
+**Moments multipolaires** :
+
+```
+Coefficient de quadrupôle attendu :
+
+C₂ = (2/5π) ∫ [δT(θ_jet)]² dΩ
+
+C₂ ~ (γ₀ - 1)²/γ₀² · (4π/5)
+
+Pour γ₀ = 10³ : C₂ ~ 2.5 × 10⁻⁶
+
+Prédiction : Excès de puissance à ℓ = 2
+```
+
+**Signature angulaire** :
+
+```
+Direction privilégiée : axe du jet primordial
+
+Corrélation avec :
+- Dark flow observé : v_df ~ 600-1000 km/s
+- Axe du mal cosmologique
+- Asymétrie hémisphérique du CMB
+
+Angle prédit : alignement à ~5-10°
+```
+
+#### 13.2.2 Corrélations Hawking Non-Locales
+
+**Coefficient de corrélation** :
+
+Pour deux trous noirs TN₁ et TN₂ distants de d :
+
+```
+C_Hawking(TN₁, TN₂) = ⟨Ψ_H1|Ψ_H2⟩
+
+C(d) = C₀ · exp(-d/λ_intrication)
+
+Avec longueur d'intrication :
+
+λ_intrication = (ℓ_Planck² / r_s) · exp(S_BH/k_B)
+
+Pour TN stellaires (M ~ 10 M_☉) :
+  r_s ~ 30 km
+  S_BH ~ 10⁷⁸ k_B
+  λ_intrication ~ 10²⁰ m ~ 10 années-lumière
+
+Pour TN supermassifs (M ~ 10⁹ M_☉) :
+  λ_intrication ~ 10²⁴ m ~ 100 Mpc
+```
+
+**Signal détectable** :
+
+```
+Taux de corrélation mesurable :
+
+R_corr = (N_coïncidences - N_aléatoire) / N_total
+
+Prédiction : R_corr > 0 pour TN dans même amas
+
+Exemple (Virgo, d ~ 1 Mpc) :
+  R_corr ~ 10⁻⁶ - 10⁻⁸
+
+Détectable avec :
+  - Observatoires gravitationnels (LISA)
+  - Corrélations de jets X
+  - Télescopes Event Horizon
+```
+
+#### 13.2.3 Formation Stellaire Induite par AGN
+
+**Taux de formation stellaire** :
+
+```
+SFR_AGN(z) = η · P_jet(z) · |t⁻(z)/t⁺_jet|^α
+
+Avec :
+  η ~ 0.01-0.1 (efficacité de conversion)
+  α ~ 1-2 (exposant de couplage)
+  P_jet ~ 10⁴⁴-10⁴⁷ erg/s (puissance du jet)
+
+Évolution temporelle :
+
+|t⁻(z)/t⁺_jet| ∝ (1+z)^(-3/2)
+
+SFR_AGN(z) ∝ (1+z)^(-3α/2)
+
+Pour α = 1.5 :
+  SFR_AGN(z=0) / SFR_AGN(z=2) ~ 8
+
+Prédiction : Formation stellaire actuelle 8× plus forte qu'à z=2
+```
+
+**Données observationnelles** :
+
+```
+Zones de formation autour d'AGN :
+
+Distance typique : r ~ 1-10 kpc
+SFR observé : 10-100 M_☉/an
+
+Rapport AGN/normal :
+  SFR_AGN / SFR_galaxie ~ 0.1-0.5
+
+Prédiction vérifiable :
+  Gradient radial : SFR(r) ∝ exp(-r/r_jet)
+  r_jet ~ 2-5 kpc
+```
+
+#### 13.2.4 Échelles d'Énergie
+
+**Énergie de l'horizon** :
+
+```
+E_horizon = ℏc/r_s = (ℏc³)/(2GM)
+
+Pour différentes masses :
+
+TN stellaire (10 M_☉) :
+  E_h ~ 10 keV
+  T_Hawking ~ 10⁻⁸ K
+
+TN supermassif (10⁹ M_☉) :
+  E_h ~ 10⁻⁴ eV
+  T_Hawking ~ 10⁻¹⁷ K
+
+TN primordial originel (10²² M_☉) :
+  E_h ~ 10⁻¹⁷ eV ~ 10⁻³ K
+  Comparable au CMB : T_CMB ~ 2.7 K
+```
+
+**Énergie de normalisation** :
+
+```
+E_h = 1 en unités naturelles à l'horizon
+
+Correspond à :
+  ε_Planck = √(ℏc⁵/G) ~ 10¹⁹ GeV
+
+Rapport :
+  E_h / ε_Planck = ℓ_Planck / r_s
+
+Pour TN cosmologique (M ~ 10²² M_☉) :
+  E_h / ε_Planck ~ 10⁻⁴⁰
+
+Échelle d'énergie du Big Bang compatible
+```
+
+### 13.3 Unification avec la Gravité Quantique à Boucles
+
+#### 13.3.1 Réseaux de Spin à l'Horizon
+
+**Structure quantique de l'horizon** :
+
+```
+Surface de l'horizon = somme de surfaces élémentaires
+
+A_horizon = ∑ᵢ A_i
+
+A_i = 8πγℓ²_Planck √(j_i(j_i+1))
+
+Avec :
+  γ ~ 0.2375 (paramètre d'Immirzi)
+  j_i : nombre quantique de spin (j = 1/2, 1, 3/2, ...)
+```
+
+**Réseau de spin dual** :
+
+Pour la topologie en double boucle :
+
+```
+|Ψ_horizon⟩ = ∑_{graphes Γ} ψ_Γ |Γ, j_e, i_n⟩
+
+Avec deux types de liens :
+
+Liens équatoriaux (masse) :
+  j_eq = 1/2, 1, 3/2, ... (demi-entiers)
+  Couplage à la masse : m ∝ √(j(j+1))
+
+Liens polaires (lumière) :
+  j_pol = 1, 2, 3, ... (entiers seulement)
+  Couplage au champ électromagnétique
+
+Contrainte de dualité :
+  ∑_eq j_eq · A_eq = ∑_pol j_pol · A_pol
+```
+
+#### 13.3.2 Quantification de l'Aire
+
+**Spectre de l'aire** :
+
+```
+Â |Ψ⟩ = 8πγℓ²_Planck ∑ᵢ √(j_i(j_i+1)) |Ψ⟩
+
+Valeurs propres pour double boucle :
+
+A_n,m = 8πγℓ²_Planck [∑ⁿₖ₌₁ √(j_k^eq(j_k^eq+1)) + ∑ᵐₗ₌₁ √(j_l^pol(j_l^pol+1))]
+
+Minimum :
+  A_min = 8πγℓ²_Planck (√2 + 2) ~ 27.3 ℓ²_Planck
+
+  (√2 pour j_eq=1/2, 2 pour j_pol=1)
+```
+
+**Entropie de Bekenstein-Hawking dérivée** :
+
+```
+S_BH = k_B ln(Ω)
+
+Où Ω = nombre de micro-états
+
+Comptage LQG pour double boucle :
+
+Ω ~ exp[(A_horizon)/(4γℓ²_Planck) · (1 + δ_dual)]
+
+δ_dual ~ 0.1-0.2 (correction due à la dualité)
+
+S_BH = (k_B A)/(4γℓ²_Planck) · (1 + δ_dual)
+
+Retrouve Bekenstein-Hawking avec correction :
+  S_BH ≈ (k_B A)/(4ℓ²_Planck) · (1 + 0.15)
+```
+
+#### 13.3.3 Spin Foams et Boucles Temporelles
+
+**Mousse de spin pour évolution temporelle** :
+
+```
+Amplitude de transition :
+
+Z = ∑_{spin foams F} ∏_{faces f} A_f(j_f) ∏_{edges e} A_e(j_e, i_e)
+
+Pour topologie bouclée :
+
+F = F_eq ∪ F_pol (union de deux mousses)
+
+Amplitude factorisée :
+
+Z_total = Z_eq · Z_pol · ⟨Z_eq|Z_pol⟩_horizon
+
+Terme d'interférence à l'horizon :
+
+⟨Z_eq|Z_pol⟩ = exp(iS_horizon[A_eq, A_pol])
+
+S_horizon ~ (A_eq · A_pol)/(ℓ²_Planck)
+```
+
+**Boucle temporelle fermée** :
+
+```
+Contrainte hamiltonienne modifiée :
+
+Ĥ |Ψ⟩ = 0
+
+Devient pour topologie bouclée :
+
+(Ĥ_eq + Ĥ_pol + Ĥ_int) |Ψ⟩ = λ |Ψ⟩
+
+λ ≠ 0 : valeur propre non-nulle due à la boucle
+
+λ ~ ℏ/t_Planck (énergie de la boucle temporelle)
+```
+
+#### 13.3.4 Variables d'Ashtekar Complexes
+
+**Connexion d'Ashtekar** :
+
+```
+A^i_a = Γ^i_a + iγK^i_a
+
+Avec :
+  Γ : connexion de spin
+  K : courbure extrinsèque
+  γ : paramètre d'Immirzi
+
+Pour double boucle, décomposition :
+
+A = A_eq + A_pol
+
+A^i_a,eq : connexion équatoriale (SU(2))
+A^i_a,pol : connexion polaire (U(1) × ℝ)
+```
+
+**Courbure et dualité** :
+
+```
+F^i_{ab} = ∂_a A^i_b - ∂_b A^i_a + ε^i_{jk} A^j_a A^k_b
+
+Contrainte de Gauss modifiée :
+
+D_a E^{ai} = ρ_masse δ(θ - π/2) + ρ_lumière [δ(θ) + δ(θ - π)]
+
+E^{ai} : densitée de triade
+
+Conservation :
+
+∫_equateur ρ_masse dS = ∫_poles ρ_lumière dS
+```
+
+### 13.4 Extension aux Trous Noirs de Kerr (Rotation)
+
+#### 13.4.1 Métrique de Kerr avec Dualité t⁺/t⁻
+
+**Métrique de Kerr standard** :
+
+```
+ds² = -(1 - 2GMr/ρ²)c²dt² + (ρ²/Δ)dr² + ρ²dθ²
+      + (r² + a² + 2GMra²sin²θ/ρ²)sin²θ dφ²
+      - (4GMrac sin²θ/ρ²) dt dφ
+
+Avec :
+  ρ² = r² + a²cos²θ
+  Δ = r² - 2GMr/c² + a²
+  a = J/(Mc) (paramètre de rotation)
+```
+
+**Extension avec dualité temporelle** :
+
+```
+Compactification temporelle :
+  t → t_c = arctan(t/t_Planck)
+
+Signature duale :
+
+ds² = -sgn(r - r_+)²·f(r,θ)²c²dt_c² + g(r)dr² + ...
+
+Avec horizons :
+
+r_± = GM/c² ± √[(GM/c²)² - a²]
+
+Horizon externe : r_+
+Horizon interne : r_-
+
+Dualité :
+  r > r_+ : t⁻ < 0 (extérieur)
+  r_- < r < r_+ : transition complexe (ergosphère)
+  r < r_- : t⁺ > 0 (intérieur)
+```
+
+#### 13.4.2 Ergosphère et Référentiels Corotatifs
+
+**Ergosphère** :
+
+```
+Région entre r_+ et r_ergo :
+
+r_ergo(θ) = GM/c² + √[(GM/c²)² - a²cos²θ]
+
+Dans l'ergosphère :
+  g_tt = -(1 - 2GMr/ρ²) < 0 → change de signe
+
+Interprétation temporelle :
+
+t_c(r_ergo) ~ 0 → référence temporelle partielle
+
+Gradient de temps :
+
+∂_r t_c |_ergo → ∞ (infini temporel accessible)
+```
+
+**Frame dragging** :
+
+```
+Fréquence angulaire de frame dragging :
+
+ω(r,θ) = 2GMrac/(ρ²Σ)
+
+Avec Σ = (r² + a²)² - a²Δsin²θ
+
+À l'horizon :
+
+ω_H = ac/(2GMr_+) (vitesse angulaire de l'horizon)
+
+Interprétation : Rotation du référentiel temporel
+```
+
+#### 13.4.3 Jets et Rotation : Mécanisme de Blandford-Znajek
+
+**Puissance extractible** :
+
+```
+P_BZ = (B²c/16π) · (a²r²_+/r³_g) · Ω²_H
+
+Avec :
+  B : champ magnétique
+  r_g = GM/c²
+  Ω_H = c/(2GM) · a/(r²_+ + a²) (vitesse angulaire)
+
+Efficacité maximale :
+
+η_max = 1 - √(1 - a²/r²_+)
+
+Pour a = GM/c² (rotation maximale, Kerr extrême) :
+  η_max = 0.42 (42% de Mc²)
+```
+
+**Connexion avec émission duale** :
+
+```
+Jets polaires (θ ~ 0°, 180°) :
+
+P_jet,pol = η_BZ · (dM/dt) c²
+
+Direction : alignée avec moment angulaire J
+
+Émission équatoriale (θ ~ 90°) :
+
+P_eq = (1 - η_BZ) · (dM/dt) c²
+
+Conservation :
+  P_jet,pol + P_eq = (dM/dt) c²
+
+Ratio :
+  P_jet / P_eq ~ a/(GM/c²) (croît avec rotation)
+```
+
+#### 13.4.4 Moment Angulaire et Conservation
+
+**Conservation du moment angulaire total** :
+
+```
+J_total = J_TN + J_jets + J_équateur
+
+dJ_total/dt = 0
+
+Avec :
+
+dJ_TN/dt < 0 (TN perd J par émission)
+
+dJ_jets/dt = ∫_pôles r × v_jet dm/dt
+
+dJ_équateur/dt = ∫_équateur r × v_masse dm/dt
+```
+
+**Distribution angulaire** :
+
+```
+Jets polaires :
+  J_z = ∫ L_z(θ~0°) ∝ a · (dM_jet/dt)
+
+Émission équatoriale :
+  J_xy = ∫ L_perp(θ=90°) ∝ √(r_s · GM) · (dM_eq/dt)
+
+Orthogonalité :
+  J_z · J_xy = 0
+
+Conservation vectorielle :
+  |J_TN(t₀)| = √(J²_jets + J²_eq) (à tout instant)
+```
+
+#### 13.4.5 Topologie de Kerr avec Double Boucle
+
+**Structure topologique** :
+
+```
+Pour Kerr, topologie = ℝ × S¹ × 𝕊¹_t (ring singularity)
+
+Extension à double boucle :
+
+𝓣_Kerr = (ℝ × S¹_ring) ⊕ (𝕊¹_eq ∨ 𝕊¹_pol)
+
+Éléments :
+  - Ring singularité : r = 0, θ = π/2
+  - Boucle équatoriale : émission de masse
+  - Boucles polaires : jets (×2, Nord et Sud)
+
+Points de jonction :
+  - Horizons : r = r_±, t_c = 0
+  - Pôles de rotation : θ = 0°, 180°
+```
+
+**Diagramme de Carter-Penrose étendu** :
+
+```
+        Jets (θ=0°)
+            |
+    t⁺      |      t⁻
+    ↓   Ergosphère  ↓
+    | \  (r_ergo)  / |
+    |  \ Horizon  /  |
+    |   \  r_+   /   |
+    |    \      /    |
+  Ring  Émission  Ring
+   |    équateur    |
+   |    /      \    |
+   |   / r_-    \   |
+   |  / (int.)   \  |
+   | /            \ |
+   ↓               ↓
+        Jets (θ=180°)
+
+Caractéristiques :
+- Double horizon : r_+ (ext.), r_- (int.)
+- Ergosphère : accès partiel à t=0
+- Ring singularity traversable (?)
+- Jets bipolaires symétriques
+```
+
+#### 13.4.6 Prédictions Spécifiques pour Kerr
+
+**Signatures observables** :
+
+```
+1. Asymétrie des jets :
+
+   R_jet = L_jet,Nord / L_jet,Sud
+
+   Prédiction : R_jet ~ 1 + O(cos i)
+
+   i : angle d'inclinaison de l'axe de rotation
+
+2. Précession du plan équatorial :
+
+   Ω_préc = (2GMa)/(r³c²)
+
+   Observable dans disque d'accrétion
+
+3. Corrélations spin-émission :
+
+   η_émission ∝ a/(GM/c²)
+
+   Plus de rotation → plus d'émission polaire
+
+4. Facteur de Lorentz des jets :
+
+   γ_jet = 1/√(1 - (v_jet/c)²)
+
+   v_jet/c ≈ 1 - (1-a)² pour a → 1
+
+   γ_jet ~ 10² - 10³ pour Kerr proche extrême
+```
+
+**Test avec observations** :
+
+```
+M87* (Event Horizon Telescope) :
+  a/M ~ 0.9 ± 0.1
+  γ_jet ~ 10-15
+
+  Prédiction : Émission polaire dominante
+             Anneau d'émission équatoriale
+
+Cygnus X-1 :
+  a/M ~ 0.95 ± 0.05
+  Jets observés : γ ~ 2-5
+
+  Compatible avec η_BZ ~ 15-20%
+```
+
+---
+
+## 14. Philosophie : L'Univers Dual
+
+### 14.1 Principe de Dualité Temporelle
 
 **Énoncé fondamental** :
 
@@ -1398,7 +2146,7 @@ Car tous partagent t = 0 comme référence commune
 2. Création et destruction sont des perspectives, pas des absolus
 3. Les trous noirs sont aussi essentiels à la création que les étoiles
 
-### 13.2 Le Trou Noir Créateur
+### 14.2 Le Trou Noir Créateur
 
 **Vision traditionnelle** : Trou noir = mort cosmique, fin de l'information
 
@@ -1414,7 +2162,7 @@ Dans τ_TN : TN émet → vie (via jets inversés)
 - Médiateurs de l'inversion causale
 - Catalyseurs de complexification
 
-### 13.3 Rééquilibrage Cosmique
+### 14.3 Rééquilibrage Cosmique
 
 L'univers maintient un équilibre entre :
 
@@ -1432,9 +2180,9 @@ L'univers ne crée ni ne détruit, il transforme selon la perspective temporelle
 
 ---
 
-## 14. Connexions avec la Théorie Complète
+## 15. Connexions avec la Théorie Complète
 
-### 14.1 Liaison Asselin et Trous Noirs
+### 15.1 Liaison Asselin et Trous Noirs
 
 Les trous noirs, avec τ_TN → 0, créent des **Liaisons Asselin extrêmes** :
 
@@ -1450,7 +2198,7 @@ f → f_max (liaison maximale)
 - Courbes de rotation plates (liaison avec TN central)
 - Bulbe galactique stabilisé par TN
 
-### 14.2 Cartographie Després Autour des TN
+### 15.2 Cartographie Després Autour des TN
 
 La **Cartographie Després** révèle la structure de distorsion autour d'un TN :
 
@@ -1469,7 +2217,7 @@ Près du TN : γ_Després → ∞
 
 Le "halo de matière noire" autour d'un TN est la manifestation de ce gradient de τ.
 
-### 14.3 Expansion Temporelle et Évolution des TN
+### 15.3 Expansion Temporelle et Évolution des TN
 
 Dans un univers où τ_cosmique(t) = (t/t₀)^(2/3) augmente :
 
@@ -1486,7 +2234,7 @@ Le gradient augmente avec le temps !
 
 ---
 
-## 15. Questions Ouvertes et Perspectives
+## 16. Questions Ouvertes et Perspectives
 
 ### 14.1 Physique Quantique à l'Horizon
 
@@ -1514,7 +2262,7 @@ Corrélations quantiques entre radiation Hawking (t⁻) et intérieur TN (t⁺)
 ρ_entrelacé = |Ψ_horizon⟩⟨Ψ_horizon| ≠ ρ(t⁺) ⊗ ρ(t⁻)
 ```
 
-### 15.2 Rayonnement de Hawking Réinterprété
+### 16.2 Rayonnement de Hawking Réinterprété
 
 **Dans τ_externe** : TN émet radiation thermique (Hawking)
 
@@ -1526,7 +2274,7 @@ Radiation_Hawking(τ_externe) = -Accrétion(τ_TN) · (τ_externe/τ_TN)
 
 **À explorer** : Connexion entre température de Hawking et inversion temporelle.
 
-### 15.3 Singularité et Temps Nul
+### 16.3 Singularité et Temps Nul
 
 **Question centrale** : Que signifie physiquement τ = 0 ?
 
@@ -1553,7 +2301,7 @@ t⁻ < 0 (extérieur) →  Temps négatif, décroissant vers l'extérieur
 - Les trous noirs sont les **ancres temporelles** qui maintiennent cette référence dans l'univers
 - La "singularité" n'est pas un problème à résoudre, mais la **définition même du temps universel**
 
-### 15.4 Trous Noirs et Origine de l'Univers
+### 16.4 Trous Noirs et Origine de l'Univers
 
 **Approche privilégiée : Le Big Bang comme sortie d'un trou noir supermassif**
 
@@ -1617,7 +2365,7 @@ Les deux convergent vers la même condition : t = 0
 
 ---
 
-## 16. Résumé et Conclusions
+## 17. Résumé et Conclusions
 
 ### 15.1 Principes Fondamentaux
 
@@ -1628,7 +2376,7 @@ Les deux convergent vers la même condition : t = 0
    - Destructeurs dans référentiel du TN
    - Créateurs dans référentiel externe (pouponnières d'étoiles)
 
-### 16.2 Implications Majeures
+### 17.2 Implications Majeures
 
 **Cosmologiques** :
 - Trous noirs = ancres temporelles de l'univers
@@ -1640,7 +2388,7 @@ Les deux convergent vers la même condition : t = 0
 - Causalité relative au temps propre
 - Univers dual : pas d'absolu de création ou destruction
 
-### 16.3 Unification avec Maîtrise du Temps
+### 17.3 Unification avec Maîtrise du Temps
 
 Cette cosmologie des trous noirs complète la **Théorie de Maîtrise du Temps** :
 
@@ -1654,7 +2402,7 @@ Ancres temporelles (trous noirs, τ → 0)
 Univers structuré avec matière/énergie noires expliquées
 ```
 
-### 16.4 Vers une Nouvelle Compréhension
+### 17.4 Vers une Nouvelle Compréhension
 
 **Le trou noir n'est pas un "trou"** :
 - C'est un **point de référence temporelle**
@@ -1673,7 +2421,7 @@ Univers structuré avec matière/énergie noires expliquées
 
 ---
 
-## 17. Formules Clés
+## 18. Formules Clés
 
 ### Structure Temporelle Duale
 ```
@@ -1725,7 +2473,7 @@ E_noire(t⁻) + E_matière(t⁺) = 0 (conservation)
 
 ---
 
-## 18. Références et Documents Connexes
+## 19. Références et Documents Connexes
 
 **Dans la Théorie de Maîtrise du Temps** :
 - [LIAISON_ASSELIN.md](LIAISON_ASSELIN.md) - Gravitation par liaison temporelle
