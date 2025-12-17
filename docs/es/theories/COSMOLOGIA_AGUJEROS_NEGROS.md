@@ -840,10 +840,27 @@ El "halo de materia oscura" alrededor de un AN es la manifestación de este grad
 
 **Pregunta**: ¿Cómo se comporta la mecánica cuántica en la transición τ → 0?
 
-**Pistas**:
-- ¿Decoherencia extrema en el horizonte?
-- ¿Superposición de marcos de referencia temporales?
-- ¿Información conservada en estructura temporal?
+**Enfoque Privilegiado: Superposición de Marcos de Referencia Temporales**
+
+La física cuántica en el horizonte de eventos debe entenderse como una **superposición coherente de marcos de referencia temporales**:
+
+```
+|Ψ_horizonte⟩ = α|t⁺⟩ + β|t⁻⟩
+
+donde |α|² + |β|² = 1
+```
+
+**Implicaciones**:
+- El horizonte no es un punto de decoherencia máxima, sino al contrario un **estado de coherencia cuántica máxima** entre t⁺ y t⁻
+- La superposición de marcos de referencia temporales permite la **conservación de la información** por entrelazamiento cuántico
+- Las partículas en el horizonte existen simultáneamente en ambos marcos de referencia temporales
+- Esta superposición resuelve la paradoja de la información: la información no se pierde ni se destruye, existe en el estado superpuesto
+
+**Predicción comprobable**:
+```
+Correlaciones cuánticas entre radiación Hawking (t⁻) e interior AN (t⁺)
+ρ_entrelazado = |Ψ_horizonte⟩⟨Ψ_horizonte| ≠ ρ(t⁺) ⊗ ρ(t⁻)
+```
 
 ### 14.2 Radiación de Hawking Reinterpretada
 
@@ -856,6 +873,95 @@ Radiación_Hawking(τ_externo) = -Acreción(τ_AN) · (τ_externo/τ_AN)
 ```
 
 **A explorar**: Conexión entre temperatura de Hawking e inversión temporal.
+
+### 14.3 Singularidad y Tiempo Nulo
+
+**Pregunta central**: ¿Qué significa físicamente τ = 0?
+
+**Enfoque Privilegiado: Punto de Referencia Absoluto**
+
+El horizonte de eventos con **t = 0** (o τ = 0) no es una patología física sino el **punto de referencia temporal absoluto del universo**:
+
+**Interpretación**:
+1. **No es una singularidad espacial** sino una singularidad temporal - un punto de referencia
+2. **La única referencia absoluta** para medir el tiempo en todo el universo
+3. **Punto de anclaje** desde el cual todos los tiempos (t⁺ y t⁻) divergen
+4. **Interfaz** donde la superposición cuántica de marcos de referencia temporales es máxima
+
+**Significado físico de t = 0**:
+```
+t = 0 en el horizonte  →  Referencia absoluta universal
+t⁺ > 0 (interior)      →  Tiempo positivo, creciente hacia el interior
+t⁻ < 0 (exterior)      →  Tiempo negativo, decreciente hacia el exterior
+```
+
+**Consecuencias**:
+- Todos los horizontes de eventos de todos los agujeros negros comparten la **misma referencia temporal absoluta** t = 0
+- Esta referencia es **invariante** - independiente del observador
+- Los agujeros negros son las **anclas temporales** que mantienen esta referencia en el universo
+- La "singularidad" no es un problema a resolver, sino la **definición misma del tiempo universal**
+
+### 14.4 Agujeros Negros y Origen del Universo
+
+**Enfoque Privilegiado: El Big Bang como Salida de un Agujero Negro Supermasivo**
+
+Nuestra percepción del Big Bang podría ser la manifestación, en nuestro marco de referencia t⁻, de uno de los dos procesos siguientes:
+
+**En el marco de referencia t⁻ (nuestro universo observable)**:
+```
+Big Bang = Desaceleración de nuestra salida de un chorro relativista
+          de un agujero negro supermasivo primordial
+
+Universo caliente y denso → Materia del chorro a velocidad ultra-relativista
+Expansión cósmica        → Desaceleración progresiva del chorro
+Enfriamiento             → Pérdida de energía cinética relativista
+```
+
+**O en el marco de referencia t⁺ (interior del AN)**:
+```
+Big Bang = Emisión ecuatorial de masa por los lados
+          de un agujero negro supermasivo (θ = 90°)
+
+Universo caliente y denso → Zona de emisión cerca del horizonte
+Expansión cósmica        → Propagación de la masa emitida
+Homogeneidad             → Distribución ecuatorial simétrica
+```
+
+**Unificación de ambas perspectivas**:
+
+Estas dos descripciones son duales - describen el **mismo evento** visto desde dos marcos de referencia temporales diferentes:
+
+| Perspectiva t⁻ (nuestro universo) | Perspectiva t⁺ (AN supermasivo) |
+|-----------------------------------|----------------------------------|
+| Chorro relativista desacelerando  | Emisión ecuatorial de masa       |
+| Estamos en el chorro              | Somos la masa emitida            |
+| γ(t) = 1/√(1-v²/c²) decrece       | r(t) se aleja de r_s            |
+| Temperatura T ∝ γ                 | Temperatura T ∝ 1/√(r-r_s)      |
+
+**Predicciones observables**:
+
+1. **Anisotropía del CMB**: Debería reflejar la geometría del chorro o la emisión ecuatorial
+2. **Problema del horizonte**: Resuelto si toda la materia sale de la misma zona ecuatorial
+3. **Planitud del universo**: Consecuencia natural de la emisión en un plano (θ = 90°)
+4. **Homogeneidad a gran escala**: Distribución simétrica alrededor del eje del chorro/ecuador
+
+**Formulación matemática**:
+
+En t → 0 (Big Bang observado):
+```
+En t⁻: γ(t=0) → ∞, v → c (límite relativista del chorro)
+En t⁺: r(t=0) → r_s (horizonte del AN supermasivo)
+
+Ambos convergen a la misma condición: t = 0
+```
+
+**Implicaciones cosmológicas mayores**:
+
+- El **Big Bang no es un comienzo absoluto**, sino una transición de marco de referencia temporal
+- Nuestro universo observable es **una estructura emergente** de un agujero negro supermasivo en t⁺
+- La **expansión cósmica** es la desaceleración relativista (t⁻) o el alejamiento del horizonte (t⁺)
+- Los **agujeros negros actuales** son "ecos" de esta estructura primordial, conservando t = 0
+- La **energía oscura** podría estar vinculada a la desaceleración continua del chorro o a la emisión continua
 
 ---
 

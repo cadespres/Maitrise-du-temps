@@ -1135,10 +1135,27 @@ The gradient increases with time!
 
 **Question**: How does quantum mechanics behave in the τ → 0 transition?
 
-**Leads**:
-- Extreme decoherence at horizon?
-- Temporal reference frame superposition?
-- Information preserved in temporal structure?
+**Privileged Approach: Temporal Reference Frame Superposition**
+
+Quantum physics at the event horizon must be understood as a **coherent superposition of temporal reference frames**:
+
+```
+|Ψ_horizon⟩ = α|t⁺⟩ + β|t⁻⟩
+
+where |α|² + |β|² = 1
+```
+
+**Implications**:
+- The horizon is not a point of maximum decoherence, but rather a state of **maximum quantum coherence** between t⁺ and t⁻
+- The superposition of temporal reference frames allows **information conservation** through quantum entanglement
+- Particles at the horizon exist simultaneously in both temporal reference frames
+- This superposition resolves the information paradox: information is neither lost nor destroyed, it exists in the superposed state
+
+**Testable prediction**:
+```
+Quantum correlations between Hawking radiation (t⁻) and BH interior (t⁺)
+ρ_entangled = |Ψ_horizon⟩⟨Ψ_horizon| ≠ ρ(t⁺) ⊗ ρ(t⁻)
+```
 
 ### 14.2 Hawking Radiation Reinterpreted
 
@@ -1156,27 +1173,90 @@ Hawking_radiation(τ_external) = -Accretion(τ_BH) · (τ_external/τ_BH)
 
 **Central question**: What does τ = 0 physically mean?
 
-**Hypotheses**:
-1. **Not a spatial singularity** but a temporal singularity
-2. **Absolute reference point** for the entire universe
-3. **Interface** between two dual temporal descriptions
+**Privileged Approach: Absolute Reference Point**
 
-**To develop**: Quantum theory of time for τ → 0.
+The event horizon with **t = 0** (or τ = 0) is not a physical pathology but the **absolute temporal reference point of the universe**:
+
+**Interpretation**:
+1. **Not a spatial singularity** but a temporal singularity - a reference point
+2. **The unique absolute reference** for measuring time in the entire universe
+3. **Anchor point** from which all times (t⁺ and t⁻) diverge
+4. **Interface** where quantum superposition of temporal reference frames is maximal
+
+**Physical meaning of t = 0**:
+```
+t = 0 at horizon  →  Universal absolute reference
+t⁺ > 0 (interior) →  Positive time, increasing inward
+t⁻ < 0 (exterior) →  Negative time, decreasing outward
+```
+
+**Consequences**:
+- All event horizons of all black holes share the **same absolute temporal reference** t = 0
+- This reference is **invariant** - independent of observer
+- Black holes are the **temporal anchors** that maintain this reference in the universe
+- The "singularity" is not a problem to solve, but the **very definition of universal time**
 
 ### 14.4 Black Holes and Universe Origin
 
-**Bold speculation**:
+**Privileged Approach: Big Bang as Exit from Supermassive Black Hole**
 
-If τ_BH = 0 is absolute reference, and if τ_cosmic(t → 0) → 0 at Big Bang...
+Our perception of the Big Bang could be the manifestation, in our reference frame t⁻, of one of the following two processes:
 
-**Big Bang seen from τ = 0**:
+**In reference frame t⁻ (our observable universe)**:
 ```
-Entire universe history is simultaneous
-Big Bang = reference state
-Expansion = τ increase far from τ = 0
+Big Bang = Deceleration of our exit from a relativistic jet
+          from a primordial supermassive black hole
+
+Hot dense universe  → Jet matter at ultra-relativistic velocity
+Cosmic expansion    → Progressive deceleration of the jet
+Cooling             → Loss of relativistic kinetic energy
 ```
 
-**Interpretation**: Black holes preserve "memory" of Big Bang τ = 0 state.
+**OR in reference frame t⁺ (BH interior)**:
+```
+Big Bang = Equatorial mass emission through the sides
+          of a supermassive black hole (θ = 90°)
+
+Hot dense universe  → Emission zone near horizon
+Cosmic expansion    → Propagation of emitted mass
+Homogeneity         → Symmetric equatorial distribution
+```
+
+**Unification of both perspectives**:
+
+These two descriptions are dual - they describe the **same event** seen from two different temporal reference frames:
+
+| Perspective t⁻ (our universe) | Perspective t⁺ (supermassive BH) |
+|------------------------------|----------------------------------|
+| Decelerating relativistic jet | Equatorial mass emission        |
+| We are in the jet            | We are the emitted mass          |
+| γ(t) = 1/√(1-v²/c²) decreases | r(t) moves away from r_s        |
+| Temperature T ∝ γ            | Temperature T ∝ 1/√(r-r_s)      |
+
+**Observable predictions**:
+
+1. **CMB anisotropy**: Should reflect jet geometry or equatorial emission
+2. **Horizon problem**: Solved if all matter exits from same equatorial zone
+3. **Universe flatness**: Natural consequence of emission in a plane (θ = 90°)
+4. **Large-scale homogeneity**: Symmetric distribution around jet/equator axis
+
+**Mathematical formulation**:
+
+At t → 0 (observed Big Bang):
+```
+In t⁻: γ(t=0) → ∞, v → c (relativistic jet limit)
+In t⁺: r(t=0) → r_s (supermassive BH horizon)
+
+Both converge to same condition: t = 0
+```
+
+**Major cosmological implications**:
+
+- The **Big Bang is not an absolute beginning**, but a temporal reference frame transition
+- Our observable universe is an **emergent structure** from a supermassive black hole in t⁺
+- **Cosmic expansion** is relativistic deceleration (t⁻) or recession from horizon (t⁺)
+- **Current black holes** are "echoes" of this primordial structure, preserving t = 0
+- **Dark energy** could be linked to continuous jet deceleration or continuous emission
 
 ---
 
