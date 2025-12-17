@@ -1192,17 +1192,65 @@ Extérieur (t⁻) : t⁻ : 0 → -∞
 
 **Topologie bouclée** :
 
-L'horizon n'est pas une frontière mais un **point d'identification** :
+L'horizon n'est pas une frontière mais un **point d'identification**. De plus, les **jets relativistes** créent un second point t = 0 **polaire** :
 
 ```
-t⁺ = +∞ ────┐
-             │
-          t = 0  (horizon)
-             │
-t⁻ = -∞ ────┘
+              t = 0 (jets polaires θ=0°, 180°)
+                 │
+                 │  ← Jets ultra-relativistes
+                 │
+t⁺ = +∞ ────────┼────────┐
+                 │        │
+    t = 0 (horizon équatorial θ=90°)
+                 │        │
+t⁻ = -∞ ────────┼────────┘
+                 │
+                 │  ← Jets ultra-relativistes
+                 │
+              t = 0 (jets polaires θ=0°, 180°)
 
-Structure : S¹ (cercle) dans l'espace temporel
+Structure : Double boucle (θ-8 ou ∞) dans l'espace temporel
+- Boucle équatoriale : émission de masse (θ = 90°)
+- Points polaires : jets relativistes (θ = 0°, 180°)
 ```
+
+**Géométrie complète** :
+
+```
+Dimension radiale (r) :
+- r → 0 (centre) : t⁺ → +∞
+- r = r_s (horizon) : t = 0
+- r → ∞ (cosmologique) : t⁻ → -∞
+
+Dimension angulaire (θ) :
+- θ = 0° (pôle Nord) : t_jet = 0 (jet ultra-relativiste)
+- θ = 90° (équateur) : t_horizon = 0 (émission de masse)
+- θ = 180° (pôle Sud) : t_jet = 0 (jet ultra-relativiste)
+```
+
+**Interprétation physique** :
+
+**Dualité masse/lumière à t = 0** :
+
+- **Côté équatorial** (θ = 90°) :
+  - Émission de **masse** (v < c)
+  - Matière qui "tombe dans la masse"
+  - Référence t = 0 pour l'univers matériel observable
+  - Création de structure, galaxies, étoiles
+
+- **Côté polaire** (θ = 0°, 180°) :
+  - Émission à **vitesse de la lumière** (v → c)
+  - Jets ultra-relativistes, énergie pure
+  - Référence t = 0 pour rayonnement
+  - Création d'énergie cinétique, pouponnières d'étoiles (dans t⁻)
+
+**Unification** :
+- Les deux côtés partagent la **même référence temporelle absolue** t = 0
+- **Dualité fondamentale** : masse (équateur) ⟷ lumière (pôles)
+- Topologie en **sablier temporel** :
+  - Masse tombe vers l'équateur
+  - Lumière s'échappe par les pôles
+  - Convergence à t = 0
 
 **Formulation mathématique** :
 

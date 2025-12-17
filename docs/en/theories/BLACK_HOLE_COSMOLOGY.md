@@ -1101,17 +1101,65 @@ At horizon (t = 0): +∞ ≡ -∞ ≡ 0 (topological identification)
 
 **Looped topology**:
 
-The horizon is not a boundary but an **identification point**:
+The horizon is not a boundary but an **identification point**. Moreover, **relativistic jets** create a second **polar** t = 0 point:
 
 ```
-t⁺ = +∞ ────┐
-             │
-          t = 0  (horizon)
-             │
-t⁻ = -∞ ────┘
+              t = 0 (polar jets θ=0°, 180°)
+                 │
+                 │  ← Ultra-relativistic jets
+                 │
+t⁺ = +∞ ────────┼────────┐
+                 │        │
+    t = 0 (equatorial horizon θ=90°)
+                 │        │
+t⁻ = -∞ ────────┼────────┘
+                 │
+                 │  ← Ultra-relativistic jets
+                 │
+              t = 0 (polar jets θ=0°, 180°)
 
-Structure: S¹ (circle) in temporal space
+Structure: Double loop (figure-8 or ∞) in temporal space
+- Equatorial loop: mass emission (θ = 90°)
+- Polar points: relativistic jets (θ = 0°, 180°)
 ```
+
+**Complete geometry**:
+
+```
+Radial dimension (r):
+- r → 0 (center): t⁺ → +∞
+- r = r_s (horizon): t = 0
+- r → ∞ (cosmological): t⁻ → -∞
+
+Angular dimension (θ):
+- θ = 0° (North pole): t_jet = 0 (ultra-relativistic jet)
+- θ = 90° (equator): t_horizon = 0 (mass emission)
+- θ = 180° (South pole): t_jet = 0 (ultra-relativistic jet)
+```
+
+**Physical interpretation**:
+
+**Mass/light duality at t = 0**:
+
+- **Equatorial side** (θ = 90°):
+  - **Mass** emission (v < c)
+  - Matter that "falls into mass"
+  - Reference t = 0 for observable material universe
+  - Creation of structure, galaxies, stars
+
+- **Polar side** (θ = 0°, 180°):
+  - Emission at **speed of light** (v → c)
+  - Ultra-relativistic jets, pure energy
+  - Reference t = 0 for radiation
+  - Creation of kinetic energy, stellar nurseries (in t⁻)
+
+**Unification**:
+- Both sides share the **same absolute temporal reference** t = 0
+- **Fundamental duality**: mass (equator) ⟷ light (poles)
+- **Temporal hourglass** topology:
+  - Mass falls toward equator
+  - Light escapes through poles
+  - Convergence at t = 0
 
 **Mathematical formulation**:
 

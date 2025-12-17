@@ -837,17 +837,65 @@ En el horizonte (t = 0): +∞ ≡ -∞ ≡ 0 (identificación topológica)
 
 **Topología de bucle**:
 
-El horizonte no es una frontera sino un **punto de identificación**:
+El horizonte no es una frontera sino un **punto de identificación**. Además, los **chorros relativistas** crean un segundo punto t = 0 **polar**:
 
 ```
-t⁺ = +∞ ────┐
-             │
-          t = 0  (horizonte)
-             │
-t⁻ = -∞ ────┘
+              t = 0 (chorros polares θ=0°, 180°)
+                 │
+                 │  ← Chorros ultra-relativistas
+                 │
+t⁺ = +∞ ────────┼────────┐
+                 │        │
+    t = 0 (horizonte ecuatorial θ=90°)
+                 │        │
+t⁻ = -∞ ────────┼────────┘
+                 │
+                 │  ← Chorros ultra-relativistas
+                 │
+              t = 0 (chorros polares θ=0°, 180°)
 
-Estructura: S¹ (círculo) en el espacio temporal
+Estructura: Doble bucle (figura-8 o ∞) en el espacio temporal
+- Bucle ecuatorial: emisión de masa (θ = 90°)
+- Puntos polares: chorros relativistas (θ = 0°, 180°)
 ```
+
+**Geometría completa**:
+
+```
+Dimensión radial (r):
+- r → 0 (centro): t⁺ → +∞
+- r = r_s (horizonte): t = 0
+- r → ∞ (cosmológico): t⁻ → -∞
+
+Dimensión angular (θ):
+- θ = 0° (polo Norte): t_chorro = 0 (chorro ultra-relativista)
+- θ = 90° (ecuador): t_horizonte = 0 (emisión de masa)
+- θ = 180° (polo Sur): t_chorro = 0 (chorro ultra-relativista)
+```
+
+**Interpretación física**:
+
+**Dualidad masa/luz en t = 0**:
+
+- **Lado ecuatorial** (θ = 90°):
+  - Emisión de **masa** (v < c)
+  - Materia que "cae en la masa"
+  - Referencia t = 0 para el universo material observable
+  - Creación de estructura, galaxias, estrellas
+
+- **Lado polar** (θ = 0°, 180°):
+  - Emisión a **velocidad de la luz** (v → c)
+  - Chorros ultra-relativistas, energía pura
+  - Referencia t = 0 para radiación
+  - Creación de energía cinética, guarderías de estrellas (en t⁻)
+
+**Unificación**:
+- Ambos lados comparten la **misma referencia temporal absoluta** t = 0
+- **Dualidad fundamental**: masa (ecuador) ⟷ luz (polos)
+- Topología de **reloj de arena temporal**:
+  - Masa cae hacia el ecuador
+  - Luz escapa por los polos
+  - Convergencia en t = 0
 
 **Formulación matemática**:
 
