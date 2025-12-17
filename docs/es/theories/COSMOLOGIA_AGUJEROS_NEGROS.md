@@ -455,43 +455,110 @@ Cerca del chorro: τ_región < τ_cósmico → corrimiento al azul anómalo
 
 ## 10. Formulación Matemática Unificada
 
-### 10.1 Métrica Temporal Completa
+### 10.1 Métrica Temporal Completa con Dualidad t⁺/t⁻
 
-En la Teoría de Dominio del Tiempo, la métrica incluye explícitamente la distorsión temporal τ:
+En la Teoría de Dominio del Tiempo, la métrica incluye explícitamente la estructura temporal dual.
 
-```
-ds² = -c²τ²(r,θ,t) dt² + dr² + r²(dθ² + sin²θ dφ²)
-```
-
-Para un agujero negro en rotación (Kerr), en su propio marco de referencia:
+**Horizonte de eventos como referencia absoluta**:
 
 ```
-τ_Kerr(r,θ) = √[1 - r_s/r - (a²sin²θ)/r²]
+En el horizonte (r = r_s): t = 0, c = 1 (unidades naturales)
+
+Exterior (r > r_s): t⁻ < 0  (nuestro universo)
+Interior (r < r_s): t⁺ > 0  (marco del agujero negro)
+```
+
+**Métrica generalizada**:
+
+```
+ds² = -c² · sgn(t)² · |t(r,θ)|² dt² + dr² + r²(dθ² + sin²θ dφ²)
+
+Donde sgn(t) = {
+  -1  para r > r_s  (exterior, t⁻)
+   0  para r = r_s  (horizonte)
+  +1  para r < r_s  (interior, t⁺)
+}
+```
+
+**Para agujero negro en rotación (Kerr)**:
+
+```
+t(r,θ) = sgn(r - r_s) · √|1 - r_s/r - (a²sin²θ)/r²|
 
 Con:
 - r_s = 2GM/c²
 - a = J/(Mc) (parámetro de rotación)
+- sgn(r - r_s) = signo de (r - r_s)
 ```
 
-**En el horizonte** (r = r_s): τ → 0
-
-### 10.2 Transformación Entre Marcos de Referencia
-
-Paso del marco de referencia del AN al marco externo:
+**Estructura temporal**:
 
 ```
-τ_externo/τ_AN = exp[∫(r_s→r) (1/τ) dτ/dr dr]
+r → ∞ :  t⁻ → -∞  (tiempo cósmico normal)
+r → r_s⁺: t⁻ → 0⁻   (aproximación al horizonte desde exterior)
+r = r_s :  t = 0     (horizonte, referencia absoluta)
+r → r_s⁻: t⁺ → 0⁺   (aproximación al horizonte desde interior)
+r → 0 :  t⁺ → +∞   (singularidad central)
+```
 
-Para τ_AN → 0:
-τ_externo → ∞
+**Ventajas de esta formulación**:
+- Evita singularidad artificial en τ = 0
+- Estructura matemática continua con cambio de signo
+- Horizonte es naturalmente el punto de referencia (t = 0)
+- Dualidad temporal explícita en las ecuaciones
+
+### 10.2 Transformación Entre Marcos de Referencia t⁺ ⟷ t⁻
+
+**Paso a través del horizonte**:
+
+```
+Transformación continua:
+
+t⁻(r > r_s) → 0⁻  (aproximación exterior)
+         ↓
+    t = 0  (horizonte, referencia)
+         ↓
+t⁺(r < r_s) → 0⁺  (aproximación interior)
+```
+
+**Relación de dualidad**:
+
+```
+t⁺ = -t⁻  (inversión de signo en el horizonte)
+
+|dt⁺|/|dt⁻| = |t⁺|/|t⁻|
+
+Para t⁻ → 0⁻ y t⁺ → 0⁺:
+Ratio → 1 (continuidad en el horizonte)
 ```
 
 **Inversión temporal completa**:
 
 ```
-dt_externo/dt_AN = (τ_externo/τ_AN) → ∞
+Marco externo (t⁻ < 0):
+  - Tiempo fluye hacia futuro: dt⁻/dt_cósmico < 0
+  - Expansión, entropía creciente
+  - Energía oscura dominante
 
-Un instante en τ_AN = eternidad en τ_externo
+Marco interior (t⁺ > 0):
+  - Tiempo fluye "al revés": dt⁺/dt_cósmico > 0
+  - Contracción, creación de estructura
+  - Materia creada por chorros invertidos
+
+Horizonte (t = 0):
+  - Punto de basculación
+  - Referencia absoluta (c = 1)
+  - Interfaz entre dos universos duales
+```
+
+**Fórmula de transformación**:
+
+```
+Para paso del exterior al interior:
+
+t⁺(r_interior) = -t⁻(r_exterior) · exp[∫(r_ext→r_int) g(r') dr']
+
+Donde g(r) = función de acoplamiento gravitacional
 ```
 
 ---
@@ -649,31 +716,52 @@ Universo estructurado con materia/energía oscuras explicadas
 
 ## 15. Fórmulas Clave
 
-### Distorsión Temporal del Agujero Negro
+### Estructura Temporal Dual
 ```
-τ_AN(r) = √[1 - 2GM/(rc²)]
-En r = r_s: τ_AN = 0
+Horizonte (r = r_s): t = 0, c = 1 (referencia absoluta)
+Exterior (r > r_s): t⁻ < 0
+Interior (r < r_s): t⁺ > 0
+
+t(r) = sgn(r - r_s) · √|1 - 2GM/(rc²)|
 ```
 
-### Emisión de Masa (Marco AN)
+### Métrica con Dualidad t⁺/t⁻
 ```
-Φ_masa(θ) ∝ sin²(θ) · [1 - 2GM/(rc²)]^(-1/2)
+ds² = -c² · sgn(t)² · |t(r)|² dt² + dr² + r²dΩ²
+
+sgn(t) = { -1  (exterior, t⁻)
+            0  (horizonte)
+           +1  (interior, t⁺) }
+```
+
+### Emisión de Masa (Marco t⁺)
+```
+Φ_masa(θ) ∝ sin²(θ) / √|t⁺(r)|
 Máximo en θ = 90° (ecuador)
 ```
 
-### Inversión Temporal
+### Inversión Temporal en el Horizonte
 ```
-dt_externo/dt_AN = (τ_externo/τ_AN) → ∞ para τ_AN → 0
+t⁺ = -t⁻  (cambio de signo)
+|dt⁺|/|dt⁻| = |t⁺|/|t⁻| → 1 en horizonte
 ```
 
 ### Formación Estelar por Chorros
 ```
-SFR_chorros = k · P_chorros · [1 - τ_AN/τ_galaxia] → k · P_chorros
+dM_*/dt⁻ = η · P_chorro · |t⁻/t⁺_chorro|^α
+Con η ≈ 0.01-0.1, α ≈ 1-2
 ```
 
 ### Enlace Asselin con AN
 ```
 L_Asselin(M_AN, M, d) = √(M_AN · M) / d² · exp(-d/d_horizonte)
+Enlace máximo para |t| → 0 (cerca del horizonte)
+```
+
+### Dualidad Energética
+```
+E_oscura(t⁻) + E_materia(t⁺) = 0 (conservación)
+ΔE(t⁻) = -ΔE(t⁺) · (t⁻/t⁺)²
 ```
 
 ---

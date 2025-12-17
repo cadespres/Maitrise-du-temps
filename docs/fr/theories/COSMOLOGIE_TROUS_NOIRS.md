@@ -671,69 +671,158 @@ P(θ = 90°) >> P(θ = 0° ou 180°)
 
 ## 10. Formulation Mathématique Unifiée
 
-### 10.1 Métrique Temporelle Complète
+### 10.1 Métrique Temporelle Complète avec Dualité t⁺/t⁻
 
-Dans la Théorie de Maîtrise du Temps, la métrique inclut explicitement la distorsion temporelle τ :
+Dans la Théorie de Maîtrise du Temps, la métrique inclut explicitement la structure temporelle duale.
 
-```
-ds² = -c²τ²(r,θ,t) dt² + dr² + r²(dθ² + sin²θ dφ²)
-```
-
-Pour un trou noir en rotation (Kerr), dans son propre référentiel :
+**L'horizon des événements comme référence absolue** :
 
 ```
-τ_Kerr(r,θ) = √[1 - r_s/r - (a²sin²θ)/r²]
+À l'horizon (r = r_s) : t = 0, c = 1 (unités naturelles)
+
+Extérieur (r > r_s) : t⁻ < 0  (notre univers)
+Intérieur (r < r_s) : t⁺ > 0  (référentiel du trou noir)
+```
+
+**Métrique généralisée** :
+
+```
+ds² = -c² · sgn(t)² · |t(r,θ)|² dt² + dr² + r²(dθ² + sin²θ dφ²)
+
+Où sgn(t) = {
+  -1  pour r > r_s  (extérieur, t⁻)
+   0  pour r = r_s  (horizon)
+  +1  pour r < r_s  (intérieur, t⁺)
+}
+```
+
+**Pour un trou noir en rotation (Kerr)** :
+
+```
+t(r,θ) = sgn(r - r_s) · √|1 - r_s/r - (a²sin²θ)/r²|
 
 Avec :
 - r_s = 2GM/c²
 - a = J/(Mc) (paramètre de rotation)
+- sgn(r - r_s) = signe de (r - r_s)
 ```
 
-**À l'horizon** (r = r_s) : τ → 0
-
-### 10.2 Transformation Entre Référentiels
-
-Passage du référentiel du TN au référentiel externe :
+**Structure temporelle** :
 
 ```
-τ_externe/τ_TN = exp[∫(r_s→r) (1/τ) dτ/dr dr]
+r → ∞ :  t⁻ → -∞  (temps cosmique normal)
+r → r_s⁺ : t⁻ → 0⁻   (approche horizon par l'extérieur)
+r = r_s :  t = 0     (horizon, référence absolue)
+r → r_s⁻ : t⁺ → 0⁺   (approche horizon par l'intérieur)
+r → 0 :  t⁺ → +∞   (singularité centrale)
+```
 
-Pour τ_TN → 0 :
-τ_externe → ∞
+**Avantages de cette formulation** :
+- Évite la singularité artificielle à τ = 0
+- Structure mathématique continue avec changement de signe
+- L'horizon est naturellement le point de référence (t = 0)
+- Dualité temporelle explicite dans les équations
+
+### 10.2 Transformation Entre Référentiels t⁺ ⟷ t⁻
+
+**Passage à travers l'horizon** :
+
+```
+Transformation continue :
+
+t⁻(r > r_s) → 0⁻  (approche extérieure)
+         ↓
+    t = 0  (horizon, référence)
+         ↓
+t⁺(r < r_s) → 0⁺  (approche intérieure)
+```
+
+**Relation de dualité** :
+
+```
+t⁺ = -t⁻  (inversion de signe à l'horizon)
+
+|dt⁺|/|dt⁻| = |t⁺|/|t⁻|
+
+Pour t⁻ → 0⁻ et t⁺ → 0⁺ :
+Ratio → 1 (continuité à l'horizon)
 ```
 
 **Inversion temporelle complète** :
 
 ```
-dt_externe/dt_TN = (τ_externe/τ_TN) → ∞
+Référentiel externe (t⁻ < 0) :
+  - Temps s'écoule vers le futur : dt⁻/dt_cosmique < 0
+  - Expansion, entropie croissante
+  - Énergie noire dominante
 
-Un instant dans τ_TN = éternité dans τ_externe
+Référentiel intérieur (t⁺ > 0) :
+  - Temps s'écoule "à l'envers" : dt⁺/dt_cosmique > 0
+  - Contraction, création de structure
+  - Matière créée par jets inversés
+
+Horizon (t = 0) :
+  - Point de basculement
+  - Référence absolue (c = 1)
+  - Interface entre les deux univers duaux
+```
+
+**Formule de transformation** :
+
+```
+Pour passage de l'extérieur vers l'intérieur :
+
+t⁺(r_intérieur) = -t⁻(r_extérieur) · exp[∫(r_ext→r_int) g(r') dr']
+
+Où g(r) = fonction de couplage gravitationnel
 ```
 
 ### 10.3 Équation d'Émission de Masse
 
-Dans le référentiel du TN, le flux de "masse temporelle" émise :
+Dans le référentiel intérieur (t⁺ > 0), le flux de "masse temporelle" émise :
 
 ```
-Φ_masse(θ) = (c⁵/G²M) · sin²(θ) · [1 - 2GM/(rc²)]^(-1/2)
+Φ_masse(θ, r) = (c⁵/G²M) · sin²(θ) · |t⁺(r,θ)|^(-1/2)
+
+Avec unités naturelles (c = 1 à l'horizon) :
+Φ_masse(θ, r) ∝ sin²(θ) / √|t⁺(r)|
 
 Intégrale totale :
 M_émise_totale = ∫∫ Φ_masse(θ,φ) r² sin(θ) dθ dφ
 ```
 
-**Résultat** : Émission maximale dans plan équatorial, nulle aux pôles.
+**Résultat** : Émission maximale dans plan équatorial (θ = 90°), nulle aux pôles.
+
+**Interprétation** :
+- Dans t⁺ (intérieur) : flux sortant de masse
+- Transformation vers t⁻ (extérieur) : observé comme jets + pouponnières
+- Maximum équatorial cohérent avec géométrie de Kerr
 
 ### 10.4 Jets et Création Stellaire
 
-Taux de formation stellaire induit :
+Taux de formation stellaire induit par dualité t⁺/t⁻ :
 
 ```
-dM_*/dt = η · P_jet/c² · [τ_externe/τ_jet]^α
+dM_*/dt⁻ = η · P_jet/c² · |t⁻/t⁺_jet|^α
 
 Avec :
 - η ≈ 0.01-0.1 (efficacité de conversion)
 - α ≈ 1-2 (exposant d'inversion temporelle)
-- τ_jet ≈ τ_TN · [1 + v_jet²/c²]^(-1/2)
+- t⁺_jet = temps dans référentiel source du jet
+- t⁻ = temps dans référentiel externe (observation)
+
+À l'horizon (t = 0) :
+dM_*/dt → maximum (basculement t⁺ → t⁻)
+```
+
+**Principe de dualité** :
+
+```
+Création dans t⁺ (intérieur) ⟷ Destruction dans t⁻ (extérieur)
+Jets destructeurs (t⁺) ⟷ Pouponnières stellaires (t⁻)
+
+Flux d'énergie :
+E_jets(t⁺) = -E_formation(t⁻) · (t⁻/t⁺)²
 ```
 
 ---
@@ -948,31 +1037,52 @@ Univers structuré avec matière/énergie noires expliquées
 
 ## 15. Formules Clés
 
-### Distorsion Temporelle du Trou Noir
+### Structure Temporelle Duale
 ```
-τ_TN(r) = √[1 - 2GM/(rc²)]
-À r = r_s : τ_TN = 0
+Horizon (r = r_s) : t = 0, c = 1 (référence absolue)
+Extérieur (r > r_s) : t⁻ < 0
+Intérieur (r < r_s) : t⁺ > 0
+
+t(r) = sgn(r - r_s) · √|1 - 2GM/(rc²)|
 ```
 
-### Émission de Masse (Référentiel TN)
+### Métrique avec Dualité t⁺/t⁻
 ```
-Φ_masse(θ) ∝ sin²(θ) · [1 - 2GM/(rc²)]^(-1/2)
+ds² = -c² · sgn(t)² · |t(r)|² dt² + dr² + r²dΩ²
+
+sgn(t) = { -1  (extérieur, t⁻)
+            0  (horizon)
+           +1  (intérieur, t⁺) }
+```
+
+### Émission de Masse (Référentiel t⁺)
+```
+Φ_masse(θ) ∝ sin²(θ) / √|t⁺(r)|
 Maximum à θ = 90° (équateur)
 ```
 
-### Inversion Temporelle
+### Inversion Temporelle à l'Horizon
 ```
-dt_externe/dt_TN = (τ_externe/τ_TN) → ∞ pour τ_TN → 0
+t⁺ = -t⁻  (changement de signe)
+|dt⁺|/|dt⁻| = |t⁺|/|t⁻| → 1 à l'horizon
 ```
 
 ### Formation Stellaire par Jets
 ```
-SFR_jets = k · P_jets · [1 - τ_TN/τ_galaxie] → k · P_jets
+dM_*/dt⁻ = η · P_jet · |t⁻/t⁺_jet|^α
+Avec η ≈ 0.01-0.1, α ≈ 1-2
 ```
 
 ### Liaison Asselin avec TN
 ```
 L_Asselin(M_TN, M, d) = √(M_TN · M) / d² · exp(-d/d_horizon)
+Liaison maximale pour |t| → 0 (près horizon)
+```
+
+### Dualité Énergétique
+```
+E_noire(t⁻) + E_matière(t⁺) = 0 (conservation)
+ΔE(t⁻) = -ΔE(t⁺) · (t⁻/t⁺)²
 ```
 
 ---

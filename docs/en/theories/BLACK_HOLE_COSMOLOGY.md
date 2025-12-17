@@ -671,69 +671,158 @@ At r → r_s:
 
 ## 10. Unified Mathematical Formulation
 
-### 10.1 Complete Temporal Metric
+### 10.1 Complete Temporal Metric with t⁺/t⁻ Duality
 
-In the Theory of Time Mastery, the metric explicitly includes temporal distortion τ:
+In the Theory of Time Mastery, the metric explicitly includes the dual temporal structure.
 
-```
-ds² = -c²τ²(r,θ,t) dt² + dr² + r²(dθ² + sin²θ dφ²)
-```
-
-For a rotating black hole (Kerr), in its own reference frame:
+**Event horizon as absolute reference**:
 
 ```
-τ_Kerr(r,θ) = √[1 - r_s/r - (a²sin²θ)/r²]
+At horizon (r = r_s): t = 0, c = 1 (natural units)
+
+Exterior (r > r_s): t⁻ < 0  (our universe)
+Interior (r < r_s): t⁺ > 0  (black hole frame)
+```
+
+**Generalized metric**:
+
+```
+ds² = -c² · sgn(t)² · |t(r,θ)|² dt² + dr² + r²(dθ² + sin²θ dφ²)
+
+Where sgn(t) = {
+  -1  for r > r_s  (exterior, t⁻)
+   0  for r = r_s  (horizon)
+  +1  for r < r_s  (interior, t⁺)
+}
+```
+
+**For rotating black hole (Kerr)**:
+
+```
+t(r,θ) = sgn(r - r_s) · √|1 - r_s/r - (a²sin²θ)/r²|
 
 With:
 - r_s = 2GM/c²
 - a = J/(Mc) (rotation parameter)
+- sgn(r - r_s) = sign of (r - r_s)
 ```
 
-**At horizon** (r = r_s): τ → 0
-
-### 10.2 Transformation Between Reference Frames
-
-Passage from BH frame to external frame:
+**Temporal structure**:
 
 ```
-τ_external/τ_BH = exp[∫(r_s→r) (1/τ) dτ/dr dr]
+r → ∞ :  t⁻ → -∞  (normal cosmic time)
+r → r_s⁺: t⁻ → 0⁻   (approaching horizon from outside)
+r = r_s :  t = 0     (horizon, absolute reference)
+r → r_s⁻: t⁺ → 0⁺   (approaching horizon from inside)
+r → 0 :  t⁺ → +∞   (central singularity)
+```
 
-For τ_BH → 0:
-τ_external → ∞
+**Advantages of this formulation**:
+- Avoids artificial singularity at τ = 0
+- Continuous mathematical structure with sign change
+- Horizon naturally becomes reference point (t = 0)
+- Temporal duality explicit in equations
+
+### 10.2 Transformation Between t⁺ ⟷ t⁻ Reference Frames
+
+**Passage through horizon**:
+
+```
+Continuous transformation:
+
+t⁻(r > r_s) → 0⁻  (exterior approach)
+         ↓
+    t = 0  (horizon, reference)
+         ↓
+t⁺(r < r_s) → 0⁺  (interior approach)
+```
+
+**Duality relation**:
+
+```
+t⁺ = -t⁻  (sign inversion at horizon)
+
+|dt⁺|/|dt⁻| = |t⁺|/|t⁻|
+
+For t⁻ → 0⁻ and t⁺ → 0⁺:
+Ratio → 1 (continuity at horizon)
 ```
 
 **Complete temporal inversion**:
 
 ```
-dt_external/dt_BH = (τ_external/τ_BH) → ∞
+External frame (t⁻ < 0):
+  - Time flows toward future: dt⁻/dt_cosmic < 0
+  - Expansion, increasing entropy
+  - Dark energy dominant
 
-An instant in τ_BH = eternity in τ_external
+Interior frame (t⁺ > 0):
+  - Time flows "backward": dt⁺/dt_cosmic > 0
+  - Contraction, structure creation
+  - Matter created by inverted jets
+
+Horizon (t = 0):
+  - Tipping point
+  - Absolute reference (c = 1)
+  - Interface between two dual universes
+```
+
+**Transformation formula**:
+
+```
+For passage from exterior to interior:
+
+t⁺(r_interior) = -t⁻(r_exterior) · exp[∫(r_ext→r_int) g(r') dr']
+
+Where g(r) = gravitational coupling function
 ```
 
 ### 10.3 Mass Emission Equation
 
-In BH reference frame, "temporal mass" emitted flux:
+In interior frame (t⁺ > 0), "temporal mass" emitted flux:
 
 ```
-Φ_mass(θ) = (c⁵/G²M) · sin²(θ) · [1 - 2GM/(rc²)]^(-1/2)
+Φ_mass(θ, r) = (c⁵/G²M) · sin²(θ) · |t⁺(r,θ)|^(-1/2)
+
+With natural units (c = 1 at horizon):
+Φ_mass(θ, r) ∝ sin²(θ) / √|t⁺(r)|
 
 Total integral:
 M_emitted_total = ∫∫ Φ_mass(θ,φ) r² sin(θ) dθ dφ
 ```
 
-**Result**: Maximum emission in equatorial plane, zero at poles.
+**Result**: Maximum emission in equatorial plane (θ = 90°), zero at poles.
+
+**Interpretation**:
+- In t⁺ (interior): outward mass flux
+- Transformation to t⁻ (exterior): observed as jets + nurseries
+- Equatorial maximum consistent with Kerr geometry
 
 ### 10.4 Jets and Stellar Creation
 
-Induced star formation rate:
+Star formation rate induced by t⁺/t⁻ duality:
 
 ```
-dM_*/dt = η · P_jet/c² · [τ_external/τ_jet]^α
+dM_*/dt⁻ = η · P_jet/c² · |t⁻/t⁺_jet|^α
 
 With:
 - η ≈ 0.01-0.1 (conversion efficiency)
 - α ≈ 1-2 (temporal inversion exponent)
-- τ_jet ≈ τ_BH · [1 + v_jet²/c²]^(-1/2)
+- t⁺_jet = time in jet source frame
+- t⁻ = time in external frame (observation)
+
+At horizon (t = 0):
+dM_*/dt → maximum (t⁺ → t⁻ tipping)
+```
+
+**Duality principle**:
+
+```
+Creation in t⁺ (interior) ⟷ Destruction in t⁻ (exterior)
+Destructive jets (t⁺) ⟷ Stellar nurseries (t⁻)
+
+Energy flux:
+E_jets(t⁺) = -E_formation(t⁻) · (t⁻/t⁺)²
 ```
 
 ---
@@ -948,31 +1037,52 @@ Structured universe with dark matter/energy explained
 
 ## 15. Key Formulas
 
-### Black Hole Temporal Distortion
+### Dual Temporal Structure
 ```
-τ_BH(r) = √[1 - 2GM/(rc²)]
-At r = r_s: τ_BH = 0
+Horizon (r = r_s): t = 0, c = 1 (absolute reference)
+Exterior (r > r_s): t⁻ < 0
+Interior (r < r_s): t⁺ > 0
+
+t(r) = sgn(r - r_s) · √|1 - 2GM/(rc²)|
 ```
 
-### Mass Emission (BH Frame)
+### Metric with t⁺/t⁻ Duality
 ```
-Φ_mass(θ) ∝ sin²(θ) · [1 - 2GM/(rc²)]^(-1/2)
+ds² = -c² · sgn(t)² · |t(r)|² dt² + dr² + r²dΩ²
+
+sgn(t) = { -1  (exterior, t⁻)
+            0  (horizon)
+           +1  (interior, t⁺) }
+```
+
+### Mass Emission (t⁺ Frame)
+```
+Φ_mass(θ) ∝ sin²(θ) / √|t⁺(r)|
 Maximum at θ = 90° (equator)
 ```
 
-### Temporal Inversion
+### Temporal Inversion at Horizon
 ```
-dt_external/dt_BH = (τ_external/τ_BH) → ∞ for τ_BH → 0
+t⁺ = -t⁻  (sign change)
+|dt⁺|/|dt⁻| = |t⁺|/|t⁻| → 1 at horizon
 ```
 
 ### Jet Star Formation
 ```
-SFR_jets = k · P_jets · [1 - τ_BH/τ_galaxy] → k · P_jets
+dM_*/dt⁻ = η · P_jet · |t⁻/t⁺_jet|^α
+With η ≈ 0.01-0.1, α ≈ 1-2
 ```
 
 ### Asselin Liaison with BH
 ```
 L_Asselin(M_BH, M, d) = √(M_BH · M) / d² · exp(-d/d_horizon)
+Maximum liaison for |t| → 0 (near horizon)
+```
+
+### Energy Duality
+```
+E_dark(t⁻) + E_matter(t⁺) = 0 (conservation)
+ΔE(t⁻) = -ΔE(t⁺) · (t⁻/t⁺)²
 ```
 
 ---
