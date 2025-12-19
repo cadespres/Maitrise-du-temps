@@ -27,7 +27,8 @@
 ### 1.1 État Actuel
 
 **Théorie de Maîtrise du Temps (MT)** explique avec succès:
-- ✅ Matière noire: M_Després = k∫Φ² dV (χ²_red = 0.04)
+- ✅ Matière noire: M_Després = k(M_bary, f_gas)∫Φ² dV avec loi k universelle (χ²_red = 0.04, R²=0.9976)
+  - M_bary = M_stellaire + M_gaz, f_gas = M_gaz/M_bary
 - ✅ Énergie noire: Expansion différentielle H(z,ρ) (β = 0.38)
 - ✅ Courbes rotation galactiques
 - ✅ Alignement des bulbes (χ² = 0.93× Newton)

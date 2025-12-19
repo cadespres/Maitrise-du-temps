@@ -336,8 +336,13 @@ Particules "s'accumulent" dans régions τ élevé
 ```
 M_tot = M_bary + M_Després
 
-où: M_Després = k ∫ τ²(r) dV
-             ∝ k ∫ Φ²(r) dV    (validé χ²_red = 0.04!)
+où: M_bary = M_stellaire + M_gaz              (masse baryonique totale)
+    M_Després = k(M_bary, f_gas) ∫ τ²(r) dV
+             ∝ k(M_bary, f_gas) ∫ Φ²(r) dV   (validé χ²_red = 0.04, R²=0.9976!)
+    f_gas = M_gaz / M_bary                    (fraction gazeuse)
+
+Loi k universelle:
+    k(M_bary, f_gas) = 0.343 · (M_bary/10¹⁰M_☉)^(-1.610) · (1 + f_gas)^(-3.585)
 ```
 
 ---

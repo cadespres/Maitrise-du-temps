@@ -90,14 +90,28 @@ Análisis de 6 galaxias espirales SPARC revela **ley universal**:
 
 ```
 k(M_bary, f_gas) = k₀(M_bary/10¹⁰M_☉)^α (1 + f_gas)^β     (8)
+
+donde:
+  M_bary = M_estelar + M_gas    (masa bariónica total)
+  f_gas = M_gas / M_bary         (fracción gaseosa)
+```
+
+**Formulación explícita en función de masa estelar y gaseosa**:
+
+```
+k(M_estelar, M_gas) = k₀[(M_estelar + M_gas)/10¹⁰M_☉]^α
+                        × [1 + M_gas/(M_estelar + M_gas)]^β
+
+                    = 0.343 × [(M_estelar + M_gas)/10¹⁰M_☉]^(-1.610)
+                            × [1 + M_gas/(M_estelar + M_gas)]^(-3.585)
 ```
 
 con parámetros ajustados:
 
 ```
-k₀ = 0.343 ± 0.070
-α = -1.610 ± 0.087
-β = -3.585 ± 0.852
+k₀ = 0.343 ± 0.070    (acoplamiento fundamental adimensional)
+α = -1.610 ± 0.087    (exponente masa bariónica total)
+β = -3.585 ± 0.852    (exponente fracción gaseosa)
 R² = 0.9976 (99.76% varianza explicada)
 ```
 

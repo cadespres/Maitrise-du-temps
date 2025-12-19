@@ -84,10 +84,16 @@ M_Després(r) = k(M_bary, f_gas) · ∫₀ʳ Φ²(r') · 4πr'² dr'
 Où :
 - `Φ(r) = -GM(r)/r` : Potentiel gravitationnel
 - `k(M_bary, f_gas)` : Loi universelle de couplage (R² = 0.9976)
+- `M_bary = M_stellaire + M_gaz` : Masse baryonique totale
+- `f_gas = M_gaz / M_bary` : Fraction gazeuse
 
 **Loi universelle k** (galaxies spirales) :
 ```
-k = 0.343 · (M_bary/10¹⁰ M☉)^(-1.610) · (1 + f_gas)^(-3.585)
+k(M_bary, f_gas) = 0.343 · (M_bary/10¹⁰ M☉)^(-1.610) · (1 + f_gas)^(-3.585)
+
+Formulation explicite:
+k(M_stellaire, M_gaz) = 0.343 · [(M_stellaire + M_gaz)/10¹⁰ M☉]^(-1.610)
+                               · [1 + M_gaz/(M_stellaire + M_gaz)]^(-3.585)
 ```
 
 ### Effet Asselin

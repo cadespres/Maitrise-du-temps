@@ -92,14 +92,28 @@ Analysis of 6 SPARC spiral galaxies reveals a **universal law**:
 
 ```
 k(M_bary, f_gas) = k₀(M_bary/10¹⁰M_☉)^α (1 + f_gas)^β     (8)
+
+where:
+  M_bary = M_stellar + M_gas    (total baryonic mass)
+  f_gas = M_gas / M_bary         (gas fraction)
+```
+
+**Explicit formulation in terms of stellar and gas mass**:
+
+```
+k(M_stellar, M_gas) = k₀[(M_stellar + M_gas)/10¹⁰M_☉]^α
+                        × [1 + M_gas/(M_stellar + M_gas)]^β
+
+                    = 0.343 × [(M_stellar + M_gas)/10¹⁰M_☉]^(-1.610)
+                            × [1 + M_gas/(M_stellar + M_gas)]^(-3.585)
 ```
 
 with fitted parameters:
 
 ```
-k₀ = 0.343 ± 0.070
-α = -1.610 ± 0.087
-β = -3.585 ± 0.852
+k₀ = 0.343 ± 0.070    (fundamental dimensionless coupling)
+α = -1.610 ± 0.087    (total baryonic mass exponent)
+β = -3.585 ± 0.852    (gas fraction exponent)
 R² = 0.9976 (99.76% variance explained)
 ```
 

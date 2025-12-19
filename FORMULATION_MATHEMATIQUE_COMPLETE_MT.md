@@ -169,10 +169,21 @@ M_Després(r) = k · ∫₀ʳ [GM(r')/r']² · 4πr'² dr'
 k(M_bary, f_gas) = k₀ · (M_bary / 10¹⁰ M☉)^α · (1 + f_gas)^β
 
 où:
+  M_bary = M_stellaire + M_gaz      (masse baryonique totale)
+  f_gas = M_gaz / M_bary              (fraction gazeuse)
+
   k₀ = 0.343 ± 0.070  (constante fondamentale)
   α = -1.610 ± 0.087  (exposant masse)
   β = -3.585 ± 0.852  (exposant gaz)
-  f_gas = M_gas / M_bary
+```
+
+**Formulation explicite en fonction de M_stellaire et M_gaz**:
+```
+k(M_stellaire, M_gaz) = k₀ · [(M_stellaire + M_gaz) / 10¹⁰ M☉]^α
+                           · [1 + M_gaz/(M_stellaire + M_gaz)]^β
+
+                      = 0.343 · [(M_stellaire + M_gaz) / 10¹⁰ M☉]^(-1.610)
+                              · [1 + M_gaz/(M_stellaire + M_gaz)]^(-3.585)
 ```
 
 **Performance**: R² = 0.9976 (99.8% variance expliquée)
@@ -408,11 +419,21 @@ M_Després(r) = k(M_bary, f_gas) · ∫ Φ²(r') dV'
 **⭐ LOI UNIVERSELLE (GALAXIES SPIRALES)**:
 ```
 k(M_bary, f_gas) = 0.343 · (M_bary / 10¹⁰ M☉)^(-1.610) · (1 + f_gas)^(-3.585)
+
+où:
+  M_bary = M_stellaire + M_gaz      (masse baryonique totale)
+  f_gas = M_gaz / M_bary              (fraction gazeuse)
+```
+
+**Formulation explicite**:
+```
+k(M_stellaire, M_gaz) = 0.343 · [(M_stellaire + M_gaz) / 10¹⁰ M☉]^(-1.610)
+                              · [1 + M_gaz/(M_stellaire + M_gaz)]^(-3.585)
 ```
 
 **Paramètres calibrés**:
 - k₀ = 0.343 ± 0.070 (constante fondamentale sans dimension)
-- α = -1.610 ± 0.087 (exposant masse baryonique)
+- α = -1.610 ± 0.087 (exposant masse baryonique totale)
 - β = -3.585 ± 0.852 (exposant fraction gazeuse)
 
 **Performance**:
