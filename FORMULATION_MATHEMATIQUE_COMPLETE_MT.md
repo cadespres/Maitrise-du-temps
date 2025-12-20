@@ -177,14 +177,39 @@ où:
   β = -3.585 ± 0.852  (exposant gaz)
 ```
 
-**Formulation explicite en fonction de M_stellaire et M_gaz**:
+**Formulations explicites équivalentes en fonction de M_stellaire et M_gaz**:
+
+**Forme A - Compacte (avec fraction gazeuse implicite)**:
 ```
 k(M_stellaire, M_gaz) = k₀ · [(M_stellaire + M_gaz) / 10¹⁰ M☉]^α
                            · [1 + M_gaz/(M_stellaire + M_gaz)]^β
-
-                      = 0.343 · [(M_stellaire + M_gaz) / 10¹⁰ M☉]^(-1.610)
-                              · [1 + M_gaz/(M_stellaire + M_gaz)]^(-3.585)
 ```
+
+**Forme B - Développée (montre le terme M_stellaire + 2M_gaz)**:
+```
+k(M_stellaire, M_gaz) = k₀ · [(M_stellaire + M_gaz) / 10¹⁰ M☉]^α
+                           · [(M_stellaire + 2M_gaz) / (M_stellaire + M_gaz)]^β
+```
+
+**Forme C - Avec valeurs numériques**:
+```
+k(M_stellaire, M_gaz) = 0.343 · [(M_stellaire + M_gaz) / 10¹⁰ M☉]^(-1.610)
+                              · [(M_stellaire + 2M_gaz) / (M_stellaire + M_gaz)]^(-3.585)
+```
+
+**Forme D - Complètement développée**:
+```
+k(M_stellaire, M_gaz) = 0.343 · 10^(16.10) M☉^(-1.975)
+                              · (M_stellaire + M_gaz)^(1.975)
+                              · (M_stellaire + 2M_gaz)^(-3.585)
+
+où: 1.975 = -α + β = 1.610 - 3.585 (exposant net masse baryonique)
+```
+
+**Dépendances physiques clés**:
+- **M_stellaire dominant**: k ∝ M_stellaire^(-1.610) · (M_stellaire)^(-3.585) ≈ M_stellaire^(-5.2)
+- **M_gaz dominant**: k ∝ M_gaz^(-1.610) · (2M_gaz)^(-3.585) ≈ M_gaz^(-5.2) · 2^(-3.585)
+- **Transition**: Le terme (M_* + 2M_gas)^(-3.585) renforce fortement l'effet du gaz
 
 **Performance**: R² = 0.9976 (99.8% variance expliquée)
 **Réduction scatter**: 99.5% (facteur 262.5 → 1.15)
@@ -425,10 +450,16 @@ où:
   f_gas = M_gaz / M_bary              (fraction gazeuse)
 ```
 
-**Formulation explicite**:
+**Formulations explicites**:
 ```
+Forme développée (montre terme M_stellaire + 2M_gaz):
 k(M_stellaire, M_gaz) = 0.343 · [(M_stellaire + M_gaz) / 10¹⁰ M☉]^(-1.610)
-                              · [1 + M_gaz/(M_stellaire + M_gaz)]^(-3.585)
+                              · [(M_stellaire + 2M_gaz) / (M_stellaire + M_gaz)]^(-3.585)
+
+Forme complètement développée:
+k(M_stellaire, M_gaz) = 0.343 · 10^(16.10) M☉^(-1.975)
+                              · (M_stellaire + M_gaz)^(1.975)
+                              · (M_stellaire + 2M_gaz)^(-3.585)
 ```
 
 **Paramètres calibrés**:

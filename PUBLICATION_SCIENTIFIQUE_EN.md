@@ -98,14 +98,19 @@ where:
   f_gas = M_gas / M_bary         (gas fraction)
 ```
 
-**Explicit formulation in terms of stellar and gas mass**:
+**Explicit formulations in terms of stellar and gas mass**:
 
 ```
-k(M_stellar, M_gas) = k₀[(M_stellar + M_gas)/10¹⁰M_☉]^α
-                        × [1 + M_gas/(M_stellar + M_gas)]^β
+Developed form (shows M_stellar + 2M_gas term):
+k(M_stellar, M_gas) = 0.343 × [(M_stellar + M_gas)/10¹⁰M_☉]^(-1.610)
+                            × [(M_stellar + 2M_gas)/(M_stellar + M_gas)]^(-3.585)
 
-                    = 0.343 × [(M_stellar + M_gas)/10¹⁰M_☉]^(-1.610)
-                            × [1 + M_gas/(M_stellar + M_gas)]^(-3.585)
+Fully expanded form (power separation):
+k(M_stellar, M_gas) = 0.343 × 10^(16.10) M_☉^(-1.975)
+                            × (M_stellar + M_gas)^(1.975)
+                            × (M_stellar + 2M_gas)^(-3.585)
+
+where: 1.975 = -α + β (combined baryonic mass exponent)
 ```
 
 with fitted parameters:

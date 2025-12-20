@@ -89,11 +89,17 @@ Où :
 
 **Loi universelle k** (galaxies spirales) :
 ```
+Forme compacte:
 k(M_bary, f_gas) = 0.343 · (M_bary/10¹⁰ M☉)^(-1.610) · (1 + f_gas)^(-3.585)
 
-Formulation explicite:
+Forme explicite (montre dépendance M_stellaire et M_gaz):
 k(M_stellaire, M_gaz) = 0.343 · [(M_stellaire + M_gaz)/10¹⁰ M☉]^(-1.610)
-                               · [1 + M_gaz/(M_stellaire + M_gaz)]^(-3.585)
+                               · [(M_stellaire + 2M_gaz)/(M_stellaire + M_gaz)]^(-3.585)
+
+Forme développée (séparation des puissances):
+k(M_stellaire, M_gaz) = 0.343 · 10^(16.10) M☉^(-1.975)
+                               · (M_stellaire + M_gaz)^(1.975)
+                               · (M_stellaire + 2M_gaz)^(-3.585)
 ```
 
 ### Effet Asselin

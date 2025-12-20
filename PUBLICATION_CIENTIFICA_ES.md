@@ -96,14 +96,19 @@ donde:
   f_gas = M_gas / M_bary         (fracción gaseosa)
 ```
 
-**Formulación explícita en función de masa estelar y gaseosa**:
+**Formulaciones explícitas en función de masa estelar y gaseosa**:
 
 ```
-k(M_estelar, M_gas) = k₀[(M_estelar + M_gas)/10¹⁰M_☉]^α
-                        × [1 + M_gas/(M_estelar + M_gas)]^β
+Forma desarrollada (muestra término M_estelar + 2M_gas):
+k(M_estelar, M_gas) = 0.343 × [(M_estelar + M_gas)/10¹⁰M_☉]^(-1.610)
+                            × [(M_estelar + 2M_gas)/(M_estelar + M_gas)]^(-3.585)
 
-                    = 0.343 × [(M_estelar + M_gas)/10¹⁰M_☉]^(-1.610)
-                            × [1 + M_gas/(M_estelar + M_gas)]^(-3.585)
+Forma completamente expandida (separación de potencias):
+k(M_estelar, M_gas) = 0.343 × 10^(16.10) M_☉^(-1.975)
+                            × (M_estelar + M_gas)^(1.975)
+                            × (M_estelar + 2M_gas)^(-3.585)
+
+donde: 1.975 = -α + β (exponente combinado masa bariónica)
 ```
 
 con parámetros ajustados:
